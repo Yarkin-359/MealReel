@@ -53,8 +53,18 @@ public class test {
         menu6.addItemToMenu(i1);
         menu6.addItemToMenu(i4);
         menu6.addItemToMenu(i12);
+        menu6.addItemToMenu(i2);
+        menu6.addItemToMenu(i6);
+        menu6.addItemToMenu(i8);
+        menu6.addItemToMenu(i14);
+        menu6.addItemToMenu(i3);
 
+        System.out.println(menu6);
+        System.out.println();
 
+        menu6.sortItemsByType();
+
+        System.out.println(menu6);
         
 
         //menu.sortItemsByType();
@@ -88,15 +98,15 @@ public class test {
         filter.addRestaurants(r5);
         filter.addRestaurants(r1);
 
+        filter.cloneRestaurantsListToFilteredRestaurantsList();
         filter.sortByRating();
-        filter.setIsFilteredAtLeastOnce(true);
-        filter.includesItemsBetweenSetPriceRange(2,5);
-        filter.isFoundInGivenStreet("Çukurambar");
+        filter.includesGivenItemType("abc");
+        //filter.isFoundInGivenCity("Ankara");
 
         
-        System.out.println(filter.getRestaurants());
-        System.out.println();
-        System.out.println(filter.getFilteredRestaurants());
+        //System.out.println(filter.getRestaurants());
+        //System.out.println();
+        //System.out.println(filter.getFilteredRestaurants());
 
         //filter.includesGivenItemType("abd");
         //System.out.println(filter.getFilteredRestaurants());

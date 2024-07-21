@@ -1,4 +1,4 @@
-public interface Filterable {
+public interface FilterableRestaurant {
     public void includesGivenItemType(String type);
     public void sortByAlphabeticalOrderOfRestaurantName();
     public void includesGivenItem(String name);
