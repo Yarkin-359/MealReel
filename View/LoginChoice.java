@@ -4,6 +4,8 @@ import javafx.geometry.*;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -19,6 +21,17 @@ public class LoginChoice {
         scene = new Scene(mainRoot);
         scene.setFill(Color.ORANGE);
 
+        scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+
+            @Override
+            public void handle(KeyEvent event) {
+                if(event.getCode().equals(KeyCode.ESCAPE)) {
+                    MealReelApplication.stage.setFullScreen(true);    
+                } 
+            }
+            
+        });
+
         Image image = new Image("Meal_Reel.png");
         ImageView view = new ImageView(image);
         view.setFitHeight(140);
@@ -33,7 +46,7 @@ public class LoginChoice {
             @Override
             public void handle(ActionEvent event) {
                 LoginAsCustomer loginAsCustomer = new LoginAsCustomer();
-                loginAsCustomer.open();         
+                loginAsCustomer.open();        
             }   
         });
 

@@ -8,6 +8,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
@@ -27,6 +29,17 @@ public class LoginAsCustomer{
 
         scene = new Scene(mainRoot);
         scene.setFill(Color.ORANGE);
+
+        scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+
+            @Override
+            public void handle(KeyEvent event) {
+                if(event.getCode().equals(KeyCode.ESCAPE)) {
+                    MealReelApplication.stage.setFullScreen(true);    
+                } 
+            }
+            
+        });
 
         Image image = new Image("Meal_Reel.png");
         ImageView view = new ImageView(image);

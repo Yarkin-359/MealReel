@@ -13,6 +13,7 @@ public class MealReelApplication extends Application {
         stage.setTitle("Meal Reel");
         stage.setResizable(false);
         stage.setFullScreen(true);
+        stage.setFullScreenExitHint("");
 
         LoginChoice loginChoice = new LoginChoice();
         loginChoice.open();
