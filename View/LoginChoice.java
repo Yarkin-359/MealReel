@@ -11,7 +11,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.*;
 
-public class LoginChoice {
+public class LoginChoice implements Navigatable {
     Scene scene;
 
     public LoginChoice() {
@@ -46,7 +46,7 @@ public class LoginChoice {
             @Override
             public void handle(ActionEvent event) {
                 LoginAsCustomer loginAsCustomer = new LoginAsCustomer();
-                loginAsCustomer.open();        
+                loginAsCustomer.navigate();        
             }   
         });
 
@@ -78,7 +78,7 @@ public class LoginChoice {
             @Override
             public void handle(ActionEvent event) {
                 LoginAsRestaurantOwner loginAsRestaurantOwner = new LoginAsRestaurantOwner();
-                loginAsRestaurantOwner.open();         
+                loginAsRestaurantOwner.navigate();         
             }   
         });
 
@@ -171,7 +171,7 @@ public class LoginChoice {
         mainRoot.getChildren().addAll(title, empty1, empty2, empty3, button1, button2, button3, button4);
     }
 
-    public void open() {
+    public void navigate() {
         MealReelApplication.stage.setScene(scene);
         MealReelApplication.stage.setFullScreen(true);
     }

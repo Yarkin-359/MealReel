@@ -20,7 +20,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 
-public class LoginAsRestaurantOwner {
+public class LoginAsRestaurantOwner implements Navigatable {
     Scene scene;
 
     public LoginAsRestaurantOwner() {
@@ -222,7 +222,7 @@ public class LoginAsRestaurantOwner {
         mainRoot.getChildren().addAll(title, empty1, empty2, usernameOrEmail, password, button1, button2, button3, button4);  
     }
 
-    public void open() {
+    public void navigate() {
         MealReelApplication.stage.setScene(scene);
         MealReelApplication.stage.setFullScreen(true);
     }

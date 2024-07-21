@@ -16,7 +16,7 @@ public class MealReelApplication extends Application {
         stage.setFullScreenExitHint("");
 
         LoginChoice loginChoice = new LoginChoice();
-        loginChoice.open();
+        loginChoice.navigate();
 
         stage.show();
     }
