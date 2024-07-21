@@ -209,8 +209,38 @@ public class LoginAsRestaurantOwner implements Navigatable {
             
         });
 
+        Button button5 = new Button("Return to login choice");
+        button5.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 40));
+        button5.setTextFill(Color.WHITE);
+        button5.setBackground(new Background(new BackgroundFill(Color.DARKORANGE, new CornerRadii(30), new Insets(0))));
+        button5.setMinWidth(550);
+        button5.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                LoginChoice loginChoice = new LoginChoice();
+                loginChoice.navigate();          
+            }   
+        });
+
+        button5.setOnMouseEntered(new EventHandler<MouseEvent>() {
+
+            @Override
+            public void handle(MouseEvent event) {
+                button5.setBackground(new Background(new BackgroundFill(Color.ORANGERED, new CornerRadii(30), new Insets(0))));   
+            }
+            
+        });
+
+        button5.setOnMouseExited(new EventHandler<MouseEvent>() {
+
+            @Override
+            public void handle(MouseEvent event) {
+                button5.setBackground(new Background(new BackgroundFill(Color.DARKORANGE, new CornerRadii(30), new Insets(0))));   
+            }
+            
+        });
+
         Label empty1 = new Label();
-        Label empty2 = new Label();
 
         Label title = new Label("Restaurant Owner Login", view);
         title.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 140));
@@ -219,7 +249,7 @@ public class LoginAsRestaurantOwner implements Navigatable {
         
 
         mainRoot.setBackground(new Background(new BackgroundFill(Color.ORANGE, new CornerRadii(0), new Insets(0))));
-        mainRoot.getChildren().addAll(title, empty1, empty2, usernameOrEmail, password, button1, button2, button3, button4);  
+        mainRoot.getChildren().addAll(title, empty1, usernameOrEmail, password, button1, button2, button3, button5, button4);  
     }
 
     public void navigate() {
