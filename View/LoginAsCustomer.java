@@ -2,7 +2,6 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -21,16 +20,13 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 
 public class LoginAsCustomer implements Navigatable{
-    Scene scene;
+    VBox root;
 
     public LoginAsCustomer() {
-        VBox mainRoot = new VBox(30);
-        mainRoot.setAlignment(Pos.CENTER);
+        root = new VBox(30);
+        root.setAlignment(Pos.CENTER);
 
-        scene = new Scene(mainRoot);
-        scene.setFill(Color.ORANGE);
-
-        scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+        root.setOnKeyPressed(new EventHandler<KeyEvent>() {
 
             @Override
             public void handle(KeyEvent event) {
@@ -248,13 +244,12 @@ public class LoginAsCustomer implements Navigatable{
         title.setGraphicTextGap(40);
         
 
-        mainRoot.setBackground(new Background(new BackgroundFill(Color.ORANGE, new CornerRadii(0), new Insets(0))));
-        mainRoot.getChildren().addAll(title, empty1, usernameOrEmail, password, button1, button2, button3, button5, button4);  
+        root.setBackground(new Background(new BackgroundFill(Color.ORANGE, new CornerRadii(0), new Insets(0))));
+        root.getChildren().addAll(title, empty1, usernameOrEmail, password, button1, button2, button3, button5, button4);  
     }
 
     public void navigate() {
-        MealReelApplication.stage.setScene(scene);
-        MealReelApplication.stage.setFullScreen(true);
+        MealReelApplication.stage.getScene().setRoot(root);
     }
     
 }
