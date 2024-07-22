@@ -1,14 +1,16 @@
 import java.util.ArrayList;
 
-public class Filter implements FilterableRestaurant{
+public class RestaurantFilter implements FilterableRestaurant{
     //instance data members
+    private ListOfUsers listOfUsers;
     private ArrayList<RestaurantOwner> restaurantOwners;
     private ArrayList<RestaurantOwner> filteredRestaurantOwners;
 
     //constructor
-    public Filter() {
-        this.restaurantOwners = new ArrayList<RestaurantOwner>();
-        this.filteredRestaurantOwners = new ArrayList<RestaurantOwner>();
+    public RestaurantFilter() {
+        this.listOfUsers = new ListOfUsers();
+        this.restaurantOwners = listOfUsers.getRestaurantOwnersFromUserList();
+        cloneRestaurantsListToFilteredRestaurantsList();
     }
 
     //getters
@@ -27,14 +29,10 @@ public class Filter implements FilterableRestaurant{
         }
     }
 
-    //add the created restaurant owner to this list so that it can be used for filtering processes
-    public void addRestaurants(RestaurantOwner restaurantOwner) {
-        restaurantOwners.add(restaurantOwner);
-    }
-
     //reset filter
     public void resetFilter() {
         filteredRestaurantOwners.clear();
+        cloneRestaurantsListToFilteredRestaurantsList();
     }
 
     //filters the restaurants in a way that only the restaurants which include the given item type are shown

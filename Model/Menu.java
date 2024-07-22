@@ -13,7 +13,7 @@ public class Menu implements SortableMenu {
     public void addItemToMenu(Item item) {
         this.menu.add(item);
     }
-
+    
     
     public void removeItemFromMenu(Item item) {
         this.menu.remove(item);

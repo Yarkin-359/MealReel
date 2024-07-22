@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+
+public class ListOfUsers {
+    private ArrayList<User> users;
+
+    public ListOfUsers() {
+        //TODO get the users from the database    
+    }
+
+    //getter
+    public ArrayList<User> getUserList() {
+        return users;
+    }
+
+    //create an Array List that only includes the restaurant owners in the list of users
+    public ArrayList<RestaurantOwner> getRestaurantOwnersFromUserList() {
+        RestaurantOwner restaurantOwner;
+
+        ArrayList<RestaurantOwner> restaurantOwners = new ArrayList<RestaurantOwner>();
+
+        for(int n = 0; n < users.size(); n++) {
+            if(users.get(n) instanceof RestaurantOwner) {
+                restaurantOwner = (RestaurantOwner)users.get(n);
+                restaurantOwners.add(restaurantOwner);
+            }
+        }
+
+        return restaurantOwners;
+    }
+
+    public ArrayList<Customer> getCustomersFromUserList() {
+        Customer customer;
+
+        ArrayList<Customer> customers = new ArrayList<Customer>();
+
+        for(int n = 0; n < users.size(); n++) {
+            if(users.get(n) instanceof Customer) {
+                customer = (Customer)users.get(n);
+                customers.add(customer);
+            }
+        }
+
+        return customers;
+    }
+}
