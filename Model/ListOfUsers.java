@@ -4,6 +4,7 @@ public class ListOfUsers {
     private ArrayList<User> users;
 
     public ListOfUsers() {
+        users = new ArrayList<User>();
         //TODO get the users from the database    
     }
 
@@ -13,7 +14,7 @@ public class ListOfUsers {
     }
 
     //create an Array List that only includes the restaurant owners in the list of users
-    public ArrayList<RestaurantOwner> getRestaurantOwnersFromUserList() {
+    public ArrayList<RestaurantOwner> getRestaurantOwnersFromListOfUsers() {
         RestaurantOwner restaurantOwner;
 
         ArrayList<RestaurantOwner> restaurantOwners = new ArrayList<RestaurantOwner>();
@@ -28,7 +29,7 @@ public class ListOfUsers {
         return restaurantOwners;
     }
 
-    public ArrayList<Customer> getCustomersFromUserList() {
+    public ArrayList<Customer> getCustomersFromListOfUsers() {
         Customer customer;
 
         ArrayList<Customer> customers = new ArrayList<Customer>();

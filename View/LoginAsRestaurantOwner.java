@@ -104,7 +104,6 @@ public class LoginAsRestaurantOwner implements Navigatable {
         button1.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 40));
         button1.setTextFill(Color.WHITE);
         button1.setBackground(new Background(new BackgroundFill(Color.DARKORANGE, new CornerRadii(30), new Insets(0))));
-        button1.setMaxWidth(550);
 
         button1.setOnMouseEntered(new EventHandler<MouseEvent>() {
 
@@ -122,6 +121,15 @@ public class LoginAsRestaurantOwner implements Navigatable {
                 button1.setBackground(new Background(new BackgroundFill(Color.DARKORANGE, new CornerRadii(30), new Insets(0))));   
             }
             
+        });
+
+        button1.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                //TODO proceed the user to the main screen if the given information is correct 
+            }
+
         });
 
         Button button2 = new Button("You haven't signed up yet?");
@@ -148,11 +156,19 @@ public class LoginAsRestaurantOwner implements Navigatable {
             
         });
 
-        Button button3 = new Button("Forgot your password?");
+        button2.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                //TODO proceed to sign up choice page
+            }
+        });
+
+        Button button3 = new Button("Exit");
         button3.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 40));
         button3.setTextFill(Color.WHITE);
         button3.setBackground(new Background(new BackgroundFill(Color.DARKORANGE, new CornerRadii(30), new Insets(0))));
-        button3.setMaxWidth(550);
+        button3.setMinWidth(550);
 
         button3.setOnMouseEntered(new EventHandler<MouseEvent>() {
 
@@ -172,11 +188,27 @@ public class LoginAsRestaurantOwner implements Navigatable {
             
         });
 
-        Button button4 = new Button("Exit");
+        button3.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                MealReelApplication.stage.close();   
+            }
+            
+        });
+
+        Button button4 = new Button("Return to login choice");
         button4.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 40));
         button4.setTextFill(Color.WHITE);
         button4.setBackground(new Background(new BackgroundFill(Color.DARKORANGE, new CornerRadii(30), new Insets(0))));
         button4.setMinWidth(550);
+        button4.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                LoginChoice loginChoice = new LoginChoice();
+                loginChoice.navigate();          
+            }   
+        });
 
         button4.setOnMouseEntered(new EventHandler<MouseEvent>() {
 
@@ -196,46 +228,6 @@ public class LoginAsRestaurantOwner implements Navigatable {
             
         });
 
-        button4.setOnAction(new EventHandler<ActionEvent>() {
-
-            @Override
-            public void handle(ActionEvent event) {
-                MealReelApplication.stage.close();   
-            }
-            
-        });
-
-        Button button5 = new Button("Return to login choice");
-        button5.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 40));
-        button5.setTextFill(Color.WHITE);
-        button5.setBackground(new Background(new BackgroundFill(Color.DARKORANGE, new CornerRadii(30), new Insets(0))));
-        button5.setMinWidth(550);
-        button5.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                LoginChoice loginChoice = new LoginChoice();
-                loginChoice.navigate();          
-            }   
-        });
-
-        button5.setOnMouseEntered(new EventHandler<MouseEvent>() {
-
-            @Override
-            public void handle(MouseEvent event) {
-                button5.setBackground(new Background(new BackgroundFill(Color.ORANGERED, new CornerRadii(30), new Insets(0))));   
-            }
-            
-        });
-
-        button5.setOnMouseExited(new EventHandler<MouseEvent>() {
-
-            @Override
-            public void handle(MouseEvent event) {
-                button5.setBackground(new Background(new BackgroundFill(Color.DARKORANGE, new CornerRadii(30), new Insets(0))));   
-            }
-            
-        });
-
         Label empty1 = new Label();
 
         Label title = new Label("Restaurant Owner Login", view);
@@ -245,7 +237,7 @@ public class LoginAsRestaurantOwner implements Navigatable {
         
 
         root.setBackground(new Background(new BackgroundFill(Color.ORANGE, new CornerRadii(0), new Insets(0))));
-        root.getChildren().addAll(title, empty1, usernameOrEmail, password, button1, button2, button3, button5, button4);  
+        root.getChildren().addAll(title, empty1, usernameOrEmail, password, button1, button2, button4, button3);  
     }
 
     public void navigate() {

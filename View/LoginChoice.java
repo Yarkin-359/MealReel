@@ -120,6 +120,14 @@ public class LoginChoice implements Navigatable {
             
         });
 
+        button3.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                //TODO proceed to sign up choice page
+            }
+        });
+
         Button button4 = new Button("Exit");
         button4.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 40));
         button4.setTextFill(Color.WHITE);

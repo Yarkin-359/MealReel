@@ -9,7 +9,7 @@ public class RestaurantFilter implements FilterableRestaurant{
     //constructor
     public RestaurantFilter() {
         this.listOfUsers = new ListOfUsers();
-        this.restaurantOwners = listOfUsers.getRestaurantOwnersFromUserList();
+        this.restaurantOwners = listOfUsers.getRestaurantOwnersFromListOfUsers();
         cloneRestaurantsListToFilteredRestaurantsList();
     }
 
