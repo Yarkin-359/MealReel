@@ -7,8 +7,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
@@ -26,18 +24,6 @@ public class LoginAsCustomer implements Navigatable{
         //the layout of the stage is created
         root = new VBox(30);
         root.setAlignment(Pos.CENTER);
-
-        //prevents the user from exiting the fullscreen by hitting the escape button
-        root.setOnKeyPressed(new EventHandler<KeyEvent>() {
-
-            @Override
-            public void handle(KeyEvent event) {
-                if(event.getCode().equals(KeyCode.ESCAPE)) {
-                    MealReelApplication.stage.setFullScreen(true);    
-                } 
-            }
-            
-        });
 
         //an image for the logo of the application
         Image image = new Image("Meal_Reel.png");

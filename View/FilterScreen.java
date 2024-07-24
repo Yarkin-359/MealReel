@@ -7,8 +7,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
@@ -29,18 +27,6 @@ public class FilterScreen {
         //the layout of the stage is created
         root = new VBox(30);
         root.setAlignment(Pos.CENTER);
-
-        //prevents the user from exiting the fullscreen by hitting the escape button
-        root.setOnKeyPressed(new EventHandler<KeyEvent>() {
-
-            @Override
-            public void handle(KeyEvent event) {
-                if(event.getCode().equals(KeyCode.ESCAPE)) {
-                    MealReelApplication.stage.setFullScreen(true);    
-                } 
-            }
-            
-        });
 
         //Toggle group object
         ToggleGroup toggleGroup = new ToggleGroup();

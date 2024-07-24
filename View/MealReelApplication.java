@@ -1,6 +1,9 @@
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -20,6 +23,18 @@ public class MealReelApplication extends Application {
         stage.setFullScreen(true);
         stage.setFullScreenExitHint("");
         stage.setScene(defaultScene);
+
+        //prevents the user from exiting the fullscreen by hitting the escape button
+       defaultScene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+
+            @Override
+            public void handle(KeyEvent event) {
+                if(event.getCode().equals(KeyCode.ESCAPE)) {
+                    MealReelApplication.stage.setFullScreen(true);    
+                } 
+            }
+            
+        });
 
         LoginChoice loginChoice = new LoginChoice();
         loginChoice.navigate();
