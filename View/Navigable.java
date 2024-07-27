@@ -1,3 +1,3 @@
-public interface Navigatable {
+public interface Navigable {
     public void navigate();
 }

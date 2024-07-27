@@ -8,7 +8,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.*;
 
-public class LoginChoice implements Navigatable {
+public class LoginChoice implements Navigable {
     VBox root;
 
     public LoginChoice() {

@@ -17,7 +17,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 
-public class LoginAsCustomer implements Navigatable{
+public class LoginAsCustomer implements Navigable{
     VBox root;
 
     public LoginAsCustomer() {
