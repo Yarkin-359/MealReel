@@ -17,7 +17,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 
-public class LoginAsRestaurantOwner implements Navigatable {
+public class LoginAsRestaurantOwner implements Navigable {
     VBox root;
 
     public LoginAsRestaurantOwner() {
