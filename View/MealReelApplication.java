@@ -1,5 +1,6 @@
 import javafx.application.Application;
 import javafx.event.EventHandler;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
@@ -10,6 +11,9 @@ import javafx.stage.Stage;
 public class MealReelApplication extends Application {
 
     public static Stage stage;
+    public static Parent searchPage; //root that holds search page
+    public static Parent restaurantPage; //root that holds restaurant page
+    public static ListOfUsers listOfUsers  = new ListOfUsers(); //list of users which should be accesible for all pages
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -24,6 +28,7 @@ public class MealReelApplication extends Application {
         stage.setFullScreenExitHint("");
         stage.setScene(defaultScene);
 
+        //I think all pages should be resizable and this lines of code should be removed
         //prevents the user from exiting the fullscreen by hitting the escape button
        defaultScene.setOnKeyPressed(new EventHandler<KeyEvent>() {
 
@@ -45,4 +50,13 @@ public class MealReelApplication extends Application {
     public static void main(String[] args) {
         launch();
     }
+        
+    /* should be added to setOnAction of button which opens restaurant page
+    try should be 
+    {
+        MealReelApplication.restaurantPage = (Parent) fxmlLoader2.load();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    MealReelApplication.stage.getScene().setRoot(MealReelApplication.restaurantPage);*/
 }
