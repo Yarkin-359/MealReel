@@ -11,7 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 
-public class RestaurantPage {
+public class RestaurantPage implements Navigable{
 
     @FXML
     private ResourceBundle resources;
@@ -220,6 +220,18 @@ public class RestaurantPage {
         commentsText.appendText(/*listOfUsers.getCustomersFromListOfUsers().getLast().getUsername() + ":"*/ restaurantOwner.getCommentsOfRestaurant().get(restaurantOwner.getCommentsOfRestaurant().size() - 1));
         
         
+    }
+
+    @Override
+    public void navigate() {
+        FXMLLoader fxmlLoader2 = new FXMLLoader(getClass().getResource("RestaurantPage.fxml"));
+
+        try {
+            MealReelApplication.restaurantPage = (Parent) fxmlLoader2.load();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        MealReelApplication.stage.getScene().setRoot(MealReelApplication.restaurantPage);
     }
     
 

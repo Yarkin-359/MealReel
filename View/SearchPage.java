@@ -8,7 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
-public class SearchPage {
+public class SearchPage implements Navigable{
 
     @FXML
     private ResourceBundle resources;
@@ -134,5 +134,17 @@ public class SearchPage {
     {
         filterCheck = !filterCheck;
         filter.setVisible(filterCheck);
+    }
+
+    @Override
+    public void navigate() {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SearchPage.fxml"));
+        
+        try {
+            MealReelApplication.searchPage = (Parent) fxmlLoader.load();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        MealReelApplication.stage.getScene().setRoot(MealReelApplication.searchPage);
     }
 }

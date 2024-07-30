@@ -73,14 +73,5 @@ public class MealReelApplication extends Application {
         collection.insertOne(doc);
 
         launch();
-    }
-        
-    /* should be added to setOnAction of button which opens restaurant page
-    try should be 
-    {
-        MealReelApplication.restaurantPage = (Parent) fxmlLoader2.load();
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-    MealReelApplication.stage.getScene().setRoot(MealReelApplication.restaurantPage);*/
+    }     
 }
