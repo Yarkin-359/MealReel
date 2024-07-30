@@ -1,3 +1,10 @@
+import org.bson.Document;
+
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -10,6 +17,8 @@ import javafx.stage.Stage;
 
 public class MealReelApplication extends Application {
 
+    public static MongoClient mongoClient;
+    public static String uri = "mongodb+srv://aegoksal:886yKSzMTARwXE92@mealreel.jv59fhy.mongodb.net/";// Connection string
     public static Stage stage;
     public static Parent searchPage; //root that holds search page
     public static Parent restaurantPage; //root that holds restaurant page
@@ -48,6 +57,21 @@ public class MealReelApplication extends Application {
     }
     
     public static void main(String[] args) {
+        // Create a new MongoClient
+        mongoClient = MongoClients.create(uri);
+
+        // Gets the database
+        MongoDatabase  database = mongoClient.getDatabase("user");
+
+        // Gets the collection
+        MongoCollection<Document> collection = database.getCollection("restaurantOwners");
+
+        // Creates a new document
+        Document doc = new Document("name:", "bilkent").append("Menu", "menu");
+
+        // Inserts the document into the collection
+        collection.insertOne(doc);
+
         launch();
     }
         
