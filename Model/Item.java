@@ -4,15 +4,13 @@ public class Item {
     private String type;
     private double priceWithoutDiscount;
     private double priceWithDiscount;
-    private double discountRate;
 
     //constructor
-    public Item(String name, String type, double priceWithoutDiscount) {
-        discountRate = 0;
+    public Item(String name, String type, double priceWithoutDiscount, double priceWithDiscount) {
         setName(name);
         setType(type);
         setPriceWithoutDiscount(priceWithoutDiscount);
-        setPriceWithDiscount();
+        setPriceWithDiscount(priceWithDiscount);
     }
 
     //getters
@@ -26,10 +24,6 @@ public class Item {
 
     public double getPriceWithoutDiscount() {
         return priceWithoutDiscount;
-    }
-
-    public double getDiscountRate() {
-        return discountRate;
     }
 
     public double getPriceWithDiscount() {
@@ -49,12 +43,8 @@ public class Item {
         this.priceWithoutDiscount = priceWithoutDiscount;
     }
 
-    public void setDiscountRate(double discountRate) {
-        this.discountRate = discountRate;
-    }
-
-    public void setPriceWithDiscount() {
-        this.priceWithDiscount = this.priceWithoutDiscount - this.priceWithoutDiscount * discountRate;
+    public void setPriceWithDiscount(double priceWithDiscount) {
+        this.priceWithDiscount = priceWithDiscount;
     }
 
     @Override

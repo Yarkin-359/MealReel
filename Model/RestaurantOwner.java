@@ -4,6 +4,8 @@ public class RestaurantOwner extends User {
     private static final double MAX_RATING = 5;
 
     //instance data members
+    private String phoneNumber;
+    private String description;
     private String restaurantName;
     private Menu menu;
     private double rating;
@@ -39,6 +41,14 @@ public class RestaurantOwner extends User {
 
     public ArrayList<String> getCommentsOfRestaurant() {
         return commentsOfRestaurant;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     //setters
