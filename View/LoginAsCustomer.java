@@ -60,7 +60,7 @@ public class LoginAsCustomer implements Navigable{
                     if(listOfCustomers.get(n).getUsername().equals(usernameOrEmail.getText()) && listOfCustomers.get(n).getPassword().equals(password.getText())) {
                         isFound = true;
                         MainScreen mainScreen = new MainScreen();
-                        //mainScreen.navigate();
+                        mainScreen.navigate();
                     }
                 }
 
@@ -80,7 +80,7 @@ public class LoginAsCustomer implements Navigable{
             @Override
             public void handle(ActionEvent event) {
                 SignUpChoice signUpChoice = new SignUpChoice();
-                //signUpChoice.navigate();
+                signUpChoice.navigate();
             }
 
         });

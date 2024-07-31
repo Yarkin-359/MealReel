@@ -37,7 +37,7 @@ public class MealReelApplication extends Application {
         stage.setScene(defaultScene);
 
         
-        FilterScreen loginChoice = new FilterScreen();
+        LoginChoice loginChoice = new LoginChoice();
         loginChoice.navigate();
 
         stage.show();

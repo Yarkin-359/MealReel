@@ -60,7 +60,7 @@ public class LoginAsRestaurantOwner implements Navigable {
                     if(listOfRestaurantOwners.get(n).getUsername().equals(usernameOrEmail.getText()) && listOfRestaurantOwners.get(n).getPassword().equals(password.getText())) {
                         isFound = true;
                         MainScreen mainScreen = new MainScreen();
-                        //mainScreen.navigate();
+                        mainScreen.navigate();
                     }
                 }
 
@@ -80,7 +80,7 @@ public class LoginAsRestaurantOwner implements Navigable {
             @Override
             public void handle(ActionEvent event) {
                 SignUpChoice signUpChoice = new SignUpChoice();
-                //signUpChoice.navigate(); 
+                signUpChoice.navigate(); 
             }
 
         });
