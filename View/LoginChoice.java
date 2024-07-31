@@ -54,7 +54,8 @@ public class LoginChoice implements Navigable {
 
             @Override
             public void handle(ActionEvent event) {
-                //TODO proceed to sign up choice page
+                SignUpChoice signUpChoice = new SignUpChoice();
+                signUpChoice.navigate();
             }
         });
 

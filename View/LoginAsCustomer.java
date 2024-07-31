@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -19,8 +21,15 @@ import javafx.scene.text.FontWeight;
 
 public class LoginAsCustomer implements Navigable{
     VBox root;
+    Button login;
+    ListOfUsers listOfUsers;
+    ArrayList<Customer> listOfCustomers;
 
     public LoginAsCustomer() {
+        listOfUsers = new ListOfUsers();
+        listOfCustomers = new ArrayList<Customer>();
+        listOfCustomers = listOfUsers.getCustomersFromListOfUsers();
+
         //the layout of the stage is created
         root = new VBox(30);
         root.setAlignment(Pos.CENTER);
@@ -36,14 +45,28 @@ public class LoginAsCustomer implements Navigable{
         TextField password = createTextField("Enter your password");
 
         //a button object that proceed the user to main page
-        Button login = createButton("Login");
+        login = createButton("Login");
 
         //after clicking the login button, the given information is checked if there is a match
         login.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
             public void handle(ActionEvent event) {
-              //TODO proceed the user to main screen if the information is correct 
+                boolean isFound;
+
+                isFound = false;
+
+                for(int n = 0; n < listOfCustomers.size(); n++) {
+                    if(listOfCustomers.get(n).getUsername().equals(usernameOrEmail.getText()) && listOfCustomers.get(n).getPassword().equals(password.getText())) {
+                        isFound = true;
+                        MainScreen mainScreen = new MainScreen();
+                        mainScreen.navigate();
+                    }
+                }
+
+                if(!isFound) {
+                    login.setText("User not found");
+                } 
             }
 
         });
@@ -56,7 +79,8 @@ public class LoginAsCustomer implements Navigable{
 
             @Override
             public void handle(ActionEvent event) {
-                //TODO proceed to sign up choice page 
+                SignUpChoice signUpChoice = new SignUpChoice();
+                signUpChoice.navigate();
             }
 
         });
@@ -147,11 +171,12 @@ public class LoginAsCustomer implements Navigable{
 
             @Override
             public void handle(MouseEvent event) {
+                login.setText("Login");
+
                 if(textField.getText().equals(text)){
                     textField.setText("");   
                 }
-            }
-            
+            }    
         });
 
         //the color of the button's background is changed back to its previous color if the mouse exits the area that this button can be found at

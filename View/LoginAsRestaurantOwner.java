@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -19,8 +21,15 @@ import javafx.scene.text.FontWeight;
 
 public class LoginAsRestaurantOwner implements Navigable {
     VBox root;
+    Button login;
+    ListOfUsers listOfUsers;
+    ArrayList<RestaurantOwner> listOfRestaurantOwners;
 
     public LoginAsRestaurantOwner() {
+        listOfUsers = new ListOfUsers();
+        listOfRestaurantOwners = new ArrayList<RestaurantOwner>();
+        listOfRestaurantOwners = listOfUsers.getRestaurantOwnersFromListOfUsers();
+
         //the layout of the stage is created
         root = new VBox(30);
         root.setAlignment(Pos.CENTER);
@@ -36,14 +45,28 @@ public class LoginAsRestaurantOwner implements Navigable {
         TextField password = createTextField("Enter your password");
 
         //a button object that proceed the user to main page
-        Button login = createButton("Login");
+        login = createButton("Login");
 
         //after clicking the login button, the given information is checked if there is a match
         login.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
             public void handle(ActionEvent event) {
-              //TODO proceed the user to main screen if the information is correct 
+                boolean isFound;
+
+                isFound = false;
+
+                for(int n = 0; n < listOfRestaurantOwners.size(); n++) {
+                    if(listOfRestaurantOwners.get(n).getUsername().equals(usernameOrEmail.getText()) && listOfRestaurantOwners.get(n).getPassword().equals(password.getText())) {
+                        isFound = true;
+                        MainScreen mainScreen = new MainScreen();
+                        mainScreen.navigate();
+                    }
+                }
+
+                if(!isFound) {
+                    login.setText("User not found");
+                }
             }
 
         });
@@ -56,7 +79,8 @@ public class LoginAsRestaurantOwner implements Navigable {
 
             @Override
             public void handle(ActionEvent event) {
-                //TODO proceed to sign up choice page 
+                SignUpChoice signUpChoice = new SignUpChoice();
+                signUpChoice.navigate(); 
             }
 
         });

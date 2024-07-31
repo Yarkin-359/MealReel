@@ -110,7 +110,8 @@ public class FilterScreen {
                     restaurantFilter.includesItemsBetweenSetPriceRange(Double.parseDouble(lowerPriceRange.getText()), Double.MAX_VALUE);
                 }
 
-                //TODO proceed back to search results page 
+                SearchPage searchPage = new SearchPage();
+                searchPage.navigate();
                      
             }   
         });

@@ -32,23 +32,9 @@ public class MealReelApplication extends Application {
         MealReelApplication.stage = stage;
         stage.getIcons().add(new Image("Meal_Reel.png"));
         stage.setTitle("Meal Reel");
-        stage.setResizable(false);
-        stage.setFullScreen(true);
-        stage.setFullScreenExitHint("");
+        stage.setResizable(true);
+        stage.setMaximized(true);
         stage.setScene(defaultScene);
-
-        //I think all pages should be resizable and this lines of code should be removed
-        //prevents the user from exiting the fullscreen by hitting the escape button
-       defaultScene.setOnKeyPressed(new EventHandler<KeyEvent>() {
-
-            @Override
-            public void handle(KeyEvent event) {
-                if(event.getCode().equals(KeyCode.ESCAPE)) {
-                    MealReelApplication.stage.setFullScreen(true);    
-                } 
-            }
-            
-        });
 
         LoginChoice loginChoice = new LoginChoice();
         loginChoice.navigate();
