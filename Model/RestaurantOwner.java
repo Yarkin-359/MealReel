@@ -64,6 +64,14 @@ public class RestaurantOwner extends User {
         this.rating = rating;
     }
 
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     //add a comment to the restaurant given by the customer
     public void addCommentsToRestaurant (String comment) {
         commentsOfRestaurant.add(comment);
