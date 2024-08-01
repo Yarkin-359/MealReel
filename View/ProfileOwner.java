@@ -66,6 +66,18 @@ public class ProfileOwner extends Application {
         } catch (IOException e) {
         }
     }
+
+    //Navigation
+    public void navigate() {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ProfileOwner.fxml"));
+
+        try {
+            MealReelApplication.profileOwn = (Parent) fxmlLoader.load();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        MealReelApplication.stage.getScene().setRoot(MealReelApplication.profileOwn);
+    }
  
  public static void main(String[] args) {
         launch(args);

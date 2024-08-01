@@ -13,7 +13,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class MainScreen extends Application {
+    public static String searchString;
     
+    @FXML
+    private Button mainScButtonProfile;
+
     @FXML
     private Button mainScButtonLogin;
         
@@ -58,8 +62,6 @@ public class MainScreen extends Application {
     private ImageView mainScShortCSalad;
     private Image salad = new Image("salad.jpg");
 
-    public RestaurantFilter restaurantFilter = new RestaurantFilter();
-
     public void start(Stage primaryStage) {
         
         try {
@@ -70,15 +72,17 @@ public class MainScreen extends Application {
             primaryStage.show();
         } catch (IOException e) {
         }
+
         //Setting Images
-        mainScShortCBorek.setImage(borek);
-        mainScShortCBurger.setImage(burger);
-        mainScShortCChicken.setImage(chicken);
-        mainScShortCDoner.setImage(doner);
-        mainScShortCKebap.setImage(kebap);
-        mainScShortCPasta.setImage(pasta);
-        mainScShortCPizza.setImage(pizza);
-        mainScShortCSalad.setImage(salad);
+        //mainScShortCBorek.setImage(borek);
+        //mainScShortCBurger.setImage(burger);
+        //mainScShortCChicken.setImage(chicken);
+        //mainScShortCDoner.setImage(doner);
+        //mainScShortCKebap.setImage(kebap);
+        //mainScShortCPasta.setImage(pasta);
+        //mainScShortCPizza.setImage(pizza);
+        //mainScShortCSalad.setImage(salad);
+
         //Login navigation via button.
         mainScButtonLogin = new Button();
         mainScButtonLogin.setOnAction(new EventHandler<ActionEvent>() {
@@ -88,15 +92,17 @@ public class MainScreen extends Application {
                 loginChoice.navigate();
             }
         });
+
         //Sign Up navigation via button.
         mainScButtonSignUp = new Button();
         mainScButtonSignUp.setOnAction(new EventHandler<ActionEvent>() {
             
             public void handle(ActionEvent event){
                 SignUpChoice signUpChoice = new SignUpChoice();
-                signUpChoice.navigate();
+                //signUpChoice.navigate();
             }
         });
+
         //Search bar usage
         mainScSearchBar = new TextField();
 
@@ -104,10 +110,24 @@ public class MainScreen extends Application {
         mainScButtonSearch.setOnAction(new EventHandler<ActionEvent>() {
             
             public void handle(ActionEvent event){
-                String searchString = mainScSearchBar.getText();
-                
+                searchString = mainScSearchBar.getText();
+                SearchPage searchpage = new SearchPage();
+                searchpage.navigate();      
             }
         });
+
+    }
+
+    //Navigation
+    public void navigate() {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainScreen.fxml"));
+
+        try {
+            MealReelApplication.mainScreen = (Parent) fxmlLoader.load();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        MealReelApplication.stage.getScene().setRoot(MealReelApplication.mainScreen);
     }
  
  public static void main(String[] args) {

@@ -22,7 +22,7 @@
          <children>
             <ImageView fx:id="profCusBackButton" accessibleRole="BUTTON" fitHeight="50.0" fitWidth="50.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../Sources/pngwing.com%20(1).png" />
+                  <Image url="@backButton.png" />
                </image>
             </ImageView>
          </children>
@@ -58,7 +58,7 @@
                               </Button>
                               <ImageView fx:id="profCusPicture" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <image>
-                                    <Image url="@../../Sources/pngegg.png" />
+                                    <Image url="@defaultProfPic.png" />
                                  </image>
                                  <viewport>
                                     <Rectangle2D />
