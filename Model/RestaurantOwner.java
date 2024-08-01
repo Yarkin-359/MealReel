@@ -4,6 +4,8 @@ public class RestaurantOwner extends User {
     private static final double MAX_RATING = 5;
 
     //instance data members
+    private String phoneNumber;
+    private String description;
     private String restaurantName;
     private Menu menu;
     private double rating;
@@ -11,8 +13,10 @@ public class RestaurantOwner extends User {
     private ArrayList<String> commentsOfRestaurant;
 
     //constructor
-    public RestaurantOwner(String restaurantName, Menu menu, String password, String email, String username, Address address) {
+    public RestaurantOwner(String restaurantName, Menu menu, String password, String email, String username, Address address, String phoneNumber, String description) {
         super(password, email, username, address);
+        setDescription(description);
+        setPhoneNumber(phoneNumber);
         setRestaurantName(restaurantName);
         setMenu(menu);
         rating = 0;
@@ -41,6 +45,14 @@ public class RestaurantOwner extends User {
         return commentsOfRestaurant;
     }
 
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
     //setters
     public void setRestaurantName(String restaurantName) {
         this.restaurantName = restaurantName;
@@ -52,6 +64,14 @@ public class RestaurantOwner extends User {
 
     public void setRating(double rating) {
         this.rating = rating;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     //add a comment to the restaurant given by the customer

@@ -17,13 +17,13 @@ public class LoginChoice implements Navigable {
         root.setAlignment(Pos.CENTER);
 
         //an image for the logo of the application
-        Image image = new Image("Meal_Reel.png");
+        Image image = new Image("Meal Reel Logo.png");
         ImageView view = new ImageView(image);
-        view.setFitHeight(140);
+        view.setFitHeight(100);
         view.setPreserveRatio(true);
 
         //a button object that proceeds the user to the page where he can log in as a customer
-        Button loginAsCustomer = createButton("Login as customer", 70, 1000);
+        Button loginAsCustomer = createButton("Login as customer", 40, 800);
 
         //proceeding the user to the login as customer page
         loginAsCustomer.setOnAction(new EventHandler<ActionEvent>() {
@@ -35,7 +35,7 @@ public class LoginChoice implements Navigable {
         });
 
         //a button object that proceeds the user to the page where he can log in as a restaurant owner
-        Button loginAsRestaurantOwner = createButton("Login as restaurant owner", 70, 1000);
+        Button loginAsRestaurantOwner = createButton("Login as restaurant owner", 40, 800);
 
         //proceeding the user to the login as restaurant owner page
         loginAsRestaurantOwner.setOnAction(new EventHandler<ActionEvent>() {
@@ -47,7 +47,7 @@ public class LoginChoice implements Navigable {
         });
 
         //a button object to proceed the user to the page where he can sign up
-        Button haveNotSignedUpYet = createButton("You haven't signed up yet?", 40, 550);
+        Button haveNotSignedUpYet = createButton("You haven't signed up yet?", 30, 550);
         
         //proceeding the user to the sign up page
         haveNotSignedUpYet.setOnAction(new EventHandler<ActionEvent>() {
@@ -60,7 +60,7 @@ public class LoginChoice implements Navigable {
         });
 
         //a button object to exit the application
-        Button exit = createButton("Exit", 40, 550);
+        Button exit = createButton("Exit", 30, 550);
 
         //exiting the application by closing the stage
         exit.setOnAction(new EventHandler<ActionEvent>() {
@@ -79,7 +79,7 @@ public class LoginChoice implements Navigable {
 
         //Label object that creates the main title of this page
         Label title = new Label("Welcome to Meal Reel", view);
-        title.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 140));
+        title.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 100));
         title.setTextFill(Color.WHITE);
         title.setGraphicTextGap(40);
         

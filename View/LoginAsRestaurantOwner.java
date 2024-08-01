@@ -35,9 +35,9 @@ public class LoginAsRestaurantOwner implements Navigable {
         root.setAlignment(Pos.CENTER);
 
         //an image for the logo of the application
-        Image image = new Image("Meal_Reel.png");
+        Image image = new Image("Meal Reel Logo.png");
         ImageView view = new ImageView(image);
-        view.setFitHeight(140);
+        view.setFitHeight(100);
         view.setPreserveRatio(true);
 
         //Text Field objects
@@ -115,7 +115,7 @@ public class LoginAsRestaurantOwner implements Navigable {
 
         //Label object to create the main title of this page
         Label title = new Label("Restaurant Owner Login", view);
-        title.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 140));
+        title.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 100));
         title.setTextFill(Color.WHITE);
         title.setGraphicTextGap(40);
         
@@ -128,7 +128,7 @@ public class LoginAsRestaurantOwner implements Navigable {
     public Button createButton(String text) {
         //a button object is created with the desired traits
         Button button = new Button(text);
-        button.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 40));
+        button.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 30));
         button.setTextFill(Color.WHITE);
         button.setBackground(new Background(new BackgroundFill(Color.DARKORANGE, new CornerRadii(30), new Insets(0))));
         button.setMinWidth(550);
@@ -160,11 +160,11 @@ public class LoginAsRestaurantOwner implements Navigable {
     public TextField createTextField(String text) {
         //Text Field object is created with the desired traits
         TextField textField = new TextField(text);
-        textField.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 70));
+        textField.setFont(Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 40));
         textField.setBackground(new Background(new BackgroundFill(Color.DARKORANGE, new CornerRadii(30), new Insets(0))));
         textField.setStyle("-fx-text-inner-color: white");
         textField.setAlignment(Pos.CENTER);
-        textField.setMaxWidth(1000);
+        textField.setMaxWidth(800);
 
         //the color of the button's background is changed if the mouse enters the area that this button can be found at
         textField.setOnMouseEntered(new EventHandler<MouseEvent>() {

@@ -30,12 +30,13 @@ public class MealReelApplication extends Application {
         Scene defaultScene = new Scene(defaultRoot);
 
         MealReelApplication.stage = stage;
-        stage.getIcons().add(new Image("Meal_Reel.png"));
+        stage.getIcons().add(new Image("Meal Reel Logo.png"));
         stage.setTitle("Meal Reel");
         stage.setResizable(true);
         stage.setMaximized(true);
         stage.setScene(defaultScene);
 
+        
         LoginChoice loginChoice = new LoginChoice();
         loginChoice.navigate();
 
