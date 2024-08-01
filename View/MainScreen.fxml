@@ -53,6 +53,12 @@
                   <Image url="@Meal%20Reel%20Logo.png" />
                </image>
             </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff740380" height="40.0" layoutX="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="mainScButtonProfile" layoutX="30.0" layoutY="5.0" mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: orange;" text="Profile" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </top>
@@ -67,7 +73,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
-            <ScrollPane hbarPolicy="ALWAYS" prefHeight="200.0" prefWidth="766.0" style="-fx-background-color: orange; -fx-border-color: orange;" vbarPolicy="NEVER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0">
+            <ScrollPane hbarPolicy="ALWAYS" prefHeight="200.0" prefWidth="1743.0" style="-fx-background-color: orange; -fx-border-color: orange;" vbarPolicy="NEVER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0">
                      <children>
@@ -75,42 +81,42 @@
                            <children>
                               <ImageView fx:id="mainScShortCBurger" accessibleRole="BUTTON" fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@HamburgerPattyRecipe04.jpg" />
+                                    <Image url="@burger.jpg" />
                                  </image>
                               </ImageView>
                               <ImageView fx:id="mainScShortCPizza" accessibleRole="BUTTON" fitHeight="180.0" fitWidth="180.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@gettyimages-1124303516-36413b5bf61f45f1b7d18d90000b56b7.jpg" />
+                                    <Image url="@pizza.jpg" />
                                  </image>
                               </ImageView>
                               <ImageView fx:id="mainScShortCChicken" accessibleRole="BUTTON" fitHeight="180.0" fitWidth="180.0" layoutX="200.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@lemonade-fried-chicken-1022FOO-2000-0912e05702e64dac9bfeffbd9199aee5.jpg" />
+                                    <Image url="@chicken.jpg" />
                                  </image>
                               </ImageView>
                               <ImageView fx:id="mainScShortCPasta" accessibleRole="BUTTON" fitHeight="180.0" fitWidth="180.0" layoutX="391.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@k_Photo_Recipes_2023-01-Caramelized-Tomato-Paste-Pasta_06-CARAMELIZED-TOMATO-PASTE-PASTA-039.jpg" />
+                                    <Image url="@pasta.jpg" />
                                  </image>
                               </ImageView>
                               <ImageView fx:id="mainScShortCSalad" accessibleRole="BUTTON" fitHeight="180.0" fitWidth="180.0" layoutX="581.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@chopped-power-salad-with-chicken-0ad93f1931524a679c0f8854d74e6e57.jpg" />
+                                    <Image url="@salad.jpg" />
                                  </image>
                               </ImageView>
                               <ImageView fx:id="mainScShortCKebap" accessibleRole="BUTTON" fitHeight="180.0" fitWidth="180.0" layoutX="772.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@nizam-special-karışık-kebap-ızgara-porsiyon-nizam-pide-sütlaç-istanbul-beyoğlu-istiklal-caddesi-600x600.jpg" />
+                                    <Image url="@kebap.jpg" />
                                  </image>
                               </ImageView>
                               <ImageView fx:id="mainScShortCDoner" accessibleRole="BUTTON" fitHeight="180.0" fitWidth="180.0" layoutX="962.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@iskender.jpg" />
+                                    <Image url="@doner.jpg" />
                                  </image>
                               </ImageView>
                               <ImageView fx:id="mainScShortCBorek" accessibleRole="BUTTON" fitHeight="180.0" fitWidth="180.0" layoutX="1152.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@Su-boregi-peynirli-gorsel.jpg" />
+                                    <Image url="@borek.jpg" />
                                  </image>
                               </ImageView>
                            </children>

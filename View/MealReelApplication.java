@@ -13,6 +13,9 @@ public class MealReelApplication extends Application {
     public static Stage stage;
     public static Parent searchPage; //root that holds search page
     public static Parent restaurantPage; //root that holds restaurant page
+    public static Parent mainScreen;
+    public static Parent profileCus;
+    public static Parent profileOwn;
     public static ListOfUsers listOfUsers  = new ListOfUsers(); //list of users which should be accesible for all pages
 
     @Override
@@ -38,6 +41,28 @@ public class MealReelApplication extends Application {
     }
     
     public static void main(String[] args) {
+<<<<<<< Updated upstream
         launch(args);
     }     
+=======
+        // Create a new MongoClient
+        mongoClient = MongoClients.create(uri);
+
+        // Gets the database
+        MongoDatabase  database = mongoClient.getDatabase("user");
+
+        // Gets the collection
+        MongoCollection<Document> collection = database.getCollection("restaurantOwners");
+
+        // Creates a new document
+        Document doc = new Document("name:", "bilkent").append("Menu", "menu");
+
+        // Inserts the document into the collection
+        collection.insertOne(doc);
+
+        launch();
+    }
+    
+    
+>>>>>>> Stashed changes
 }
