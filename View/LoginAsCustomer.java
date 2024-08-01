@@ -57,6 +57,7 @@ public class LoginAsCustomer implements Navigable{
                 for(int n = 0; n < listOfCustomers.size(); n++) {
                     if(listOfCustomers.get(n).getUsername().equals(usernameOrEmail.getText()) && listOfCustomers.get(n).getPassword().equals(password.getText())) {
                         isFound = true;
+                        MealReelApplication.listOfUsers.getUserList().add(listOfCustomers.get(n));
                         MainScreen mainScreen = new MainScreen();
                         mainScreen.navigate();
                     }

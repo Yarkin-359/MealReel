@@ -57,6 +57,7 @@ public class LoginAsRestaurantOwner implements Navigable {
                 for(int n = 0; n < listOfRestaurantOwners.size(); n++) {
                     if(listOfRestaurantOwners.get(n).getUsername().equals(usernameOrEmail.getText()) && listOfRestaurantOwners.get(n).getPassword().equals(password.getText())) {
                         isFound = true;
+                        MealReelApplication.listOfUsers.getUserList().add(listOfRestaurantOwners.get(n));
                         MainScreen mainScreen = new MainScreen();
                         mainScreen.navigate();
                     }

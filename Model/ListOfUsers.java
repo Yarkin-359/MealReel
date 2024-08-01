@@ -118,8 +118,4 @@ public class ListOfUsers {
 
         return customers;
     }
-
-    public void addUserToList(User user) {
-        users.add(user);
-    }
 }
