@@ -37,28 +37,5 @@ public class MealReelApplication extends Application {
     }
     
     public static void main(String[] args) {
-<<<<<<< Updated upstream
         launch(args);
-    }     
-=======
-        // Create a new MongoClient
-        mongoClient = MongoClients.create(uri);
-
-        // Gets the database
-        MongoDatabase  database = mongoClient.getDatabase("user");
-
-        // Gets the collection
-        MongoCollection<Document> collection = database.getCollection("restaurantOwners");
-
-        // Creates a new document
-        Document doc = new Document("name:", "bilkent").append("Menu", "menu");
-
-        // Inserts the document into the collection
-        collection.insertOne(doc);
-
-        launch();
     }
-    
-    
->>>>>>> Stashed changes
-}
