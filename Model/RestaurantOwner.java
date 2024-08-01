@@ -13,8 +13,10 @@ public class RestaurantOwner extends User {
     private ArrayList<String> commentsOfRestaurant;
 
     //constructor
-    public RestaurantOwner(String restaurantName, Menu menu, String password, String email, String username, Address address) {
+    public RestaurantOwner(String restaurantName, Menu menu, String password, String email, String username, Address address, String phoneNumber, String description) {
         super(password, email, username, address);
+        setDescription(description);
+        setPhoneNumber(phoneNumber);
         setRestaurantName(restaurantName);
         setMenu(menu);
         rating = 0;
