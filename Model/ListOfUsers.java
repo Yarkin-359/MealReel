@@ -13,6 +13,11 @@ public class ListOfUsers {
         return users;
     }
 
+    //add user
+    public void addUserToList(User user) {
+        users.add(user);
+    }
+
     //create an Array List that only includes the restaurant owners in the list of users
     public ArrayList<RestaurantOwner> getRestaurantOwnersFromListOfUsers() {
         RestaurantOwner restaurantOwner;

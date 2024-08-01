@@ -26,9 +26,7 @@ public class LoginAsCustomer implements Navigable{
     ArrayList<Customer> listOfCustomers;
 
     public LoginAsCustomer() {
-        listOfUsers = new ListOfUsers();
-        listOfCustomers = new ArrayList<Customer>();
-        listOfCustomers = listOfUsers.getCustomersFromListOfUsers();
+        listOfCustomers = MealReelApplication.listOfUsers.getCustomersFromListOfUsers();
 
         //the layout of the stage is created
         root = new VBox(30);

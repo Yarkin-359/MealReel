@@ -26,9 +26,7 @@ public class LoginAsRestaurantOwner implements Navigable {
     ArrayList<RestaurantOwner> listOfRestaurantOwners;
 
     public LoginAsRestaurantOwner() {
-        listOfUsers = new ListOfUsers();
-        listOfRestaurantOwners = new ArrayList<RestaurantOwner>();
-        listOfRestaurantOwners = listOfUsers.getRestaurantOwnersFromListOfUsers();
+        listOfRestaurantOwners = MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers();
 
         //the layout of the stage is created
         root = new VBox(30);
