@@ -226,7 +226,7 @@
          </children>
       </VBox>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd51a" height="858.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="66.0" />
-      <VBox fx:id="filter" layoutX="150.0" layoutY="60.0" prefHeight="306.0" prefWidth="402.0" AnchorPane.leftAnchor="102.0" AnchorPane.rightAnchor="296.0">
+      <VBox fx:id="filter" layoutX="150.0" layoutY="60.0" prefHeight="306.0" prefWidth="402.0" visible="false" AnchorPane.leftAnchor="102.0" AnchorPane.rightAnchor="296.0">
          <children>
             <Button focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="400.0" mnemonicParsing="false" VBox.vgrow="ALWAYS">
                <graphic>

@@ -4,11 +4,11 @@ public class RestaurantFilter implements FilterableRestaurant{
     //instance data members
     private ListOfUsers listOfUsers;
     private ArrayList<RestaurantOwner> restaurantOwners;
-    private ArrayList<RestaurantOwner> filteredRestaurantOwners;
+    private ArrayList<RestaurantOwner> filteredRestaurantOwners = new ArrayList<>();
 
     //constructor
     public RestaurantFilter() {
-        this.listOfUsers = new ListOfUsers();
+        this.listOfUsers = MealReelApplication.listOfUsers;
         this.restaurantOwners = listOfUsers.getRestaurantOwnersFromListOfUsers();
         cloneRestaurantsListToFilteredRestaurantsList();
     }

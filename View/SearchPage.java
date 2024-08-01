@@ -76,9 +76,7 @@ public class SearchPage implements Navigable{
     @FXML
     void initialize() 
     {      
-
-        System.out.println(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size());
-
+        
         if(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() > 0)
         {
             text1.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(0 + (4*pageNumber)).getRestaurantName());
