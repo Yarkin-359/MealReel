@@ -16,11 +16,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProfileCustomer">
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="80.0" style="-fx-background-color: orange;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView id="customerBackButton" accessibleRole="BUTTON" fitHeight="50.0" fitWidth="50.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="profCusBackButton" accessibleRole="BUTTON" fitHeight="50.0" fitWidth="50.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../Sources/pngwing.com%20(1).png" />
                </image>
@@ -45,7 +45,7 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: darkorange;" text="Change Picture" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Button fx:id="profCusChangePic" alignment="CENTER" mnemonicParsing="false" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: darkorange;" text="Change Picture" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -56,7 +56,7 @@
                                     <Insets left="130.0" />
                                  </GridPane.margin>
                               </Button>
-                              <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <ImageView fx:id="profCusPicture" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@../../Sources/pngegg.png" />
                                  </image>
@@ -76,12 +76,12 @@
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </TextField>
-                              <TextField alignment="CENTER" editable="false" layoutX="151.0" layoutY="31.0" prefHeight="40.0" prefWidth="250.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0">
+                              <TextField fx:id="profCusTFName" alignment="CENTER" layoutX="151.0" layoutY="31.0" prefHeight="40.0" prefWidth="250.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </TextField>
-                              <Button alignment="CENTER" layoutX="46.0" layoutY="58.0" mnemonicParsing="false" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="60.0">
+                              <Button fx:id="profCusChangeName" alignment="CENTER" layoutX="46.0" layoutY="58.0" mnemonicParsing="false" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="60.0">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -102,12 +102,12 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </TextField>
-                  <TextField alignment="CENTER" editable="false" layoutX="180.0" layoutY="46.0" prefHeight="40.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="40.0">
+                  <TextField fx:id="profCusTFAdress" alignment="CENTER" layoutX="180.0" layoutY="46.0" prefHeight="40.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="40.0">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </TextField>
-                  <Button alignment="CENTER" layoutX="597.0" layoutY="51.0" mnemonicParsing="false" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                  <Button fx:id="profCusChangeAdress" alignment="CENTER" layoutX="597.0" layoutY="51.0" mnemonicParsing="false" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -124,12 +124,12 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </TextField>
-                  <TextField alignment="CENTER" editable="false" layoutX="41.0" layoutY="47.0" prefHeight="40.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="40.0">
+                  <TextField fx:id="profCusTFEmail" alignment="CENTER" layoutX="41.0" layoutY="47.0" prefHeight="40.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="40.0">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </TextField>
-                  <Button alignment="CENTER" layoutX="597.0" layoutY="56.0" mnemonicParsing="false" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                  <Button fx:id="profCusChangeEmail" alignment="CENTER" layoutX="597.0" layoutY="56.0" mnemonicParsing="false" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -151,12 +151,12 @@
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </TextField>
-                        <TextField alignment="CENTER" editable="false" layoutX="14.0" layoutY="40.0" prefHeight="40.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="40.0">
+                        <TextField fx:id="profCusTFPhone" alignment="CENTER" layoutX="14.0" layoutY="40.0" prefHeight="40.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="40.0">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </TextField>
-                        <Button alignment="CENTER" layoutX="247.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                        <Button fx:id="profCusChangePhone" alignment="CENTER" layoutX="247.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -189,7 +189,7 @@
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </TextField>
-                              <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: darkorange;" text="Click Here" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Button fx:id="profCusRevHistory" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: darkorange;" text="Click Here" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -208,7 +208,7 @@
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </Text>
-                        <TextField alignment="CENTER" editable="false" layoutX="14.0" layoutY="46.0" prefHeight="40.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0">
+                        <TextField fx:id="profCusTFRecComment" alignment="CENTER" layoutX="14.0" layoutY="46.0" prefHeight="40.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>

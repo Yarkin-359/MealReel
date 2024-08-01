@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainScreen">
    <top>
       <AnchorPane prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: orange;" BorderPane.alignment="CENTER">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff740380" height="40.0" layoutX="600.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="180.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0" />
-            <Button layoutX="680.0" layoutY="5.0" mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: orange;" text="Sign Up" textFill="WHITE" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="5.0">
+            <Button fx:id="mainScButtonSignUp" layoutX="680.0" layoutY="5.0" mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: orange;" text="Sign Up" textFill="WHITE" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="5.0">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="580.0" layoutY="5.0" mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: orange;" text="Login" textFill="WHITE" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="5.0">
+            <Button fx:id="mainScButtonLogin" layoutX="580.0" layoutY="5.0" mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: orange;" text="Login" textFill="WHITE" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="5.0">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff740380" height="40.0" layoutX="14.0" layoutY="246.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="580.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
-            <TextField layoutX="28.0" layoutY="245.0" prefWidth="480.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="30.0">
+            <TextField fx:id="mainScSearchBar" layoutX="28.0" layoutY="245.0" prefWidth="480.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="30.0">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <Button layoutX="520.0" layoutY="245.0" mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: orange;" text="Sign Up" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="515.0">
+            <Button fx:id="mainScButtonSearch" layoutX="520.0" layoutY="245.0" mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: orange;" text="Search" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="515.0">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -58,15 +59,67 @@
    <bottom>
       <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: orange;" BorderPane.alignment="CENTER" />
    </bottom>
-   <left>
+   <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What Would You Like Today?" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="What Would You Like Today?" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
+            <ScrollPane hbarPolicy="ALWAYS" prefHeight="200.0" style="-fx-background-color: orange; -fx-border-color: orange;" vbarPolicy="NEVER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0">
+                     <children>
+                        <HBox prefHeight="180.0" spacing="10.0" style="-fx-background-color: orange;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fx:id="mainScShortCBurger" accessibleRole="BUTTON" fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Project-102/MealReel/View/HamburgerPattyRecipe04.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="mainScShortCPizza" accessibleRole="BUTTON" fitHeight="180.0" fitWidth="180.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Project-102/MealReel/View/gettyimages-1124303516-36413b5bf61f45f1b7d18d90000b56b7.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="mainScShortCChicken" accessibleRole="BUTTON" fitHeight="180.0" fitWidth="180.0" layoutX="200.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Project-102/MealReel/View/lemonade-fried-chicken-1022FOO-2000-0912e05702e64dac9bfeffbd9199aee5.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="mainScShortCPasta" accessibleRole="BUTTON" fitHeight="180.0" fitWidth="180.0" layoutX="391.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Project-102/MealReel/View/k_Photo_Recipes_2023-01-Caramelized-Tomato-Paste-Pasta_06-CARAMELIZED-TOMATO-PASTE-PASTA-039.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="mainScShortCSalad" accessibleRole="BUTTON" fitHeight="180.0" fitWidth="180.0" layoutX="581.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Project-102/MealReel/View/chopped-power-salad-with-chicken-0ad93f1931524a679c0f8854d74e6e57.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="mainScShortCKebap" accessibleRole="BUTTON" fitHeight="180.0" fitWidth="180.0" layoutX="772.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Project-102/MealReel/View/nizam-special-karışık-kebap-ızgara-porsiyon-nizam-pide-sütlaç-istanbul-beyoğlu-istiklal-caddesi-600x600.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="mainScShortCDoner" accessibleRole="BUTTON" fitHeight="180.0" fitWidth="180.0" layoutX="962.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Project-102/MealReel/View/iskender.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="mainScShortCBorek" accessibleRole="BUTTON" fitHeight="180.0" fitWidth="180.0" layoutX="1152.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Project-102/MealReel/View/Su-boregi-peynirli-gorsel.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
          </children>
       </AnchorPane>
-   </left>
+   </center>
 </BorderPane>
