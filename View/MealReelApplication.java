@@ -26,13 +26,9 @@ public class MealReelApplication extends Application {
         stage.setResizable(true);
         stage.setMaximized(true);
         stage.setScene(defaultScene);
-
         
-        /*LoginChoice loginChoice = new LoginChoice();
-        loginChoice.navigate();*/
-
-        SearchPage searchPage = new SearchPage();
-        searchPage.navigate();
+        LoginChoice loginChoice = new LoginChoice();
+        loginChoice.navigate();
 
         stage.show();
     }

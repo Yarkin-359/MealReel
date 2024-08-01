@@ -67,7 +67,7 @@ public class LoginAsRestaurantOwner implements Navigable {
                     login.setText("User not found");
                 }
             }
-
+        
         });
 
         //a button object to proceed the user to the sign up page
