@@ -6,33 +6,16 @@
     "configurations": [
         {
             "type": "java",
-            "name": "ProfileOwner",
+            "name": "Current File",
             "request": "launch",
-            "mainClass": "ProfileOwner",
-            "projectName": "MealReel_32cf7f18",
-            "vmArgs": "--module-path \"C:\\Users\\Richard A. Anderson\\Documents\\JavaApps\\CS-102\\Project-102\\javafx-sdk-22.0.2\\lib\" --add-modules javafx.controls,javafx.fxml"
-        },
-        {
-            "type": "java",
-            "name": "ProfileCustomer",
-            "request": "launch",
-            "mainClass": "ProfileCustomer",
-            "projectName": "MealReel_32cf7f18",
-            "vmArgs": "--module-path \"C:\\Users\\Richard A. Anderson\\Documents\\JavaApps\\CS-102\\Project-102\\javafx-sdk-22.0.2\\lib\" --add-modules javafx.controls,javafx.fxml"
+            "mainClass": "${file}"
         },
         {
             "type": "java",
             "name": "MainScreen",
             "request": "launch",
             "mainClass": "MainScreen",
-            "projectName": "MealReel_32cf7f18",
-            "vmArgs": "--module-path \"C:\\Users\\Richard A. Anderson\\Documents\\JavaApps\\CS-102\\Project-102\\javafx-sdk-22.0.2\\lib\" --add-modules javafx.controls,javafx.fxml"
-        },
-        {
-            "type": "java",
-            "name": "Current File",
-            "request": "launch",
-            "mainClass": "${file}"
+            "projectName": "MealReel_8ca8ab00"
         },
         {
             "type": "java",
@@ -41,6 +24,20 @@
             "mainClass": "MealReelApplication",
             "projectName": "MealReel_8ca8ab00",
             "vmArgs": "--module-path \"C:\\Users\\aegok\\OneDrive\\Masaüstü\\javafx-sdk-22.0.2\\lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "ProfileCustomer",
+            "request": "launch",
+            "mainClass": "ProfileCustomer",
+            "projectName": "MealReel_8ca8ab00"
+        },
+        {
+            "type": "java",
+            "name": "ProfileOwner",
+            "request": "launch",
+            "mainClass": "ProfileOwner",
+            "projectName": "MealReel_8ca8ab00"
         }
     ]
 }

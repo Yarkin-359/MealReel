@@ -243,7 +243,6 @@
                         <TextField fx:id="textField5" focusTraversable="false" onAction="#textFile5" promptText="Enter a street to show the restaurants that can be found in the entered street" />
                         <TextField fx:id="textField6" focusTraversable="false" onAction="#textFile6" promptText="Enter the lower boundary of the price range for the items" />
                         <TextField fx:id="textField7" focusTraversable="false" onAction="#textFile7" promptText="Enter the upper boundary of the price range for the items" />
-                        <Button fx:id="resetFilterButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#resetFilter" text="Reset Filter" VBox.vgrow="ALWAYS" />
                      </children>
                   </VBox>
                </graphic>

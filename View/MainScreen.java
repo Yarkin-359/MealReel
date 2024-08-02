@@ -145,6 +145,7 @@ public class MainScreen extends Application implements Navigable{
     public void search(ActionEvent event){
         searchString = mainScSearchBar.getText();
         SearchPage searchPage = new SearchPage();
+        searchPage.navigate();
     }
 
     //Navigation
