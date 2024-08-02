@@ -59,6 +59,7 @@ public class LoginAsCustomer implements Navigable{
                     if(listOfCustomers.get(n).getUsername().equals(usernameOrEmail.getText()) && listOfCustomers.get(n).getPassword().equals(password.getText())) {
                         isFound = true;
                         MealReelApplication.listOfUsers.getUserList().add(listOfCustomers.get(n));
+                        loggedInAsCus = true;
                         MainScreen mainScreen = new MainScreen();
                         mainScreen.navigate();
                     }
@@ -68,8 +69,6 @@ public class LoginAsCustomer implements Navigable{
                     login.setText("User not found");
                     usernameOrEmail.setText("Enter your username");
                     password.setText("Enter your password");
-                } else {
-                    loggedInAsCus = true;
                 }
             }
 

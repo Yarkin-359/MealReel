@@ -16,6 +16,7 @@ public class MainScreen extends Application implements Navigable{
     ProfileCustomer newProfCus = new ProfileCustomer();
     ProfileOwner newProfOwn = new ProfileOwner();
     public static String searchString;
+    public static boolean firstSearch = true;
     
     @FXML
     private Button mainScButtonProfile;

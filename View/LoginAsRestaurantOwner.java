@@ -59,8 +59,10 @@ public class LoginAsRestaurantOwner implements Navigable {
                     if(listOfRestaurantOwners.get(n).getUsername().equals(usernameOrEmail.getText()) && listOfRestaurantOwners.get(n).getPassword().equals(password.getText())) {
                         isFound = true;
                         MealReelApplication.listOfUsers.getUserList().add(listOfRestaurantOwners.get(n));
+                        loggedInAsOwner = true;
                         MainScreen mainScreen = new MainScreen();
                         mainScreen.navigate();
+                        
                     }
                 }
 
@@ -68,8 +70,6 @@ public class LoginAsRestaurantOwner implements Navigable {
                     login.setText("User not found");
                     usernameOrEmail.setText("Enter your username");
                     password.setText("Enter your password");
-                }else{
-                    loggedInAsOwner = true;
                 }
             }
         

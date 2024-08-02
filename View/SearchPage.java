@@ -150,16 +150,16 @@ public class SearchPage implements Navigable{
         rating11.setImage(filledStar);
         rating12.setImage(filledStar);
 
-        if(RestaurantPage.restaurantFilter.getFilteredRestaurants().size() > 0)
+        if(RestaurantPage.restaurantFilter.getFilteredRestaurants().size() > 0 && MainScreen.firstSearch == true)
         {
             restaurantFilter = RestaurantPage.restaurantFilter;
+            restaurantFilter.includesGivenRestaurantName(MainScreen.searchString);
+            MainScreen.firstSearch  = false;
         }
         else
         {
             restaurantFilter.resetFilter();
         }
-
-        restaurantFilter.includesGivenRestaurantName(MainScreen.searchString);
         
         text1.setText(restaurantFilter.getFilteredRestaurants().get(0 + (4*pageNumber)).getRestaurantName());
         text2.setText(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)).getRestaurantName());

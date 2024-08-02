@@ -212,19 +212,6 @@
             </Button>
          </children>
       </HBox>
-      <VBox layoutX="494.0" layoutY="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="73.0" prefWidth="78.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="15.0">
-         <children>
-            <Button focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="72.0" prefWidth="70.0" VBox.vgrow="ALWAYS">
-               <graphic>
-                  <ImageView fitHeight="46.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@profileIcon.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-         </children>
-      </VBox>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd51a" height="858.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="66.0" />
       <VBox fx:id="filter" layoutX="150.0" layoutY="60.0" maxWidth="1.7976931348623157E308" prefHeight="306.0" prefWidth="474.0" AnchorPane.leftAnchor="102.0" AnchorPane.rightAnchor="224.0">
          <children>

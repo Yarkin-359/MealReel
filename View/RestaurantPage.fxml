@@ -79,18 +79,9 @@
             <Region prefHeight="70.0" prefWidth="180.0" />
          </children>
       </HBox>
-      <VBox layoutX="504.0" layoutY="22.0" prefHeight="355.0" prefWidth="80.0" spacing="25.0" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="22.0">
+      <VBox layoutX="504.0" layoutY="115.2" prefHeight="462.0" prefWidth="80.0" spacing="25.0" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="115.0">
          <children>
-            <Button focusTraversable="false" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="70.0" prefWidth="80.0" VBox.vgrow="ALWAYS">
-               <graphic>
-                  <ImageView fitHeight="49.0" fitWidth="45.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" y="10.0">
-                     <image>
-                        <Image url="@profileIcon.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="261.0" prefWidth="80.0" VBox.vgrow="ALWAYS">
+            <Button focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="456.0" prefWidth="80.0" VBox.vgrow="ALWAYS">
                <graphic>
                   <VBox alignment="TOP_CENTER" maxHeight="244.0" maxWidth="1.7976931348623157E308" prefHeight="244.0" prefWidth="64.0" spacing="8.0">
                      <children>
