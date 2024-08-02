@@ -9,7 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
-public class ProfileOwner extends Application {
+public class ProfileOwner extends Application implements Navigable{
 
     @FXML
     private ImageView profOwnBackButton;

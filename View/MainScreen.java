@@ -12,7 +12,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-public class MainScreen extends Application {
+public class MainScreen extends Application implements Navigable{
+    ProfileCustomer newProfCus = new ProfileCustomer();
+    ProfileOwner newProfOwn = new ProfileOwner();
     public static String searchString;
     
     @FXML
@@ -103,6 +105,23 @@ public class MainScreen extends Application {
             }
         });
 
+        //Profile button
+        mainScButtonProfile = new Button();
+        mainScButtonProfile.setOnAction(new EventHandler<ActionEvent>() {
+            
+            public void handle(ActionEvent event){
+                if (MealReelApplication.listOfUsers.getUserList().get(MealReelApplication.listOfUsers.getUserList().size() - 1) instanceof Customer) {
+                    //Customer newCust = MealReelApplication.listOfUsers.get(MealReelApplication.listOfUsers.size() - 1);
+                    
+                    //newProfCus.profCusTFName.setText(newProfCus.getCustName());
+                    
+                    
+                } else {
+                    
+                }
+            }
+        });
+
         //Search bar usage
         mainScSearchBar = new TextField();
 
@@ -118,6 +137,31 @@ public class MainScreen extends Application {
 
     }
 
+    //Navigate to Login Choice
+    public void loginChoiceNav(ActionEvent event){
+        LoginChoice loginChoice = new LoginChoice();
+        loginChoice.navigate();
+        
+    }
+
+    //Navigate to Sign Up Choice
+    //public void signUpChoiceNav(ActionEvent event){
+    //    try 
+    //    {
+    //        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SignUpChoice.fxml"));
+    //        MealReelApplication.signUpChoice = (Parent) fxmlLoader.load();
+    //    } catch (Exception e) {
+    //        e.printStackTrace();
+    //    }
+    //    MealReelApplication.stage.getScene().setRoot(MealReelApplication.signUpChoice);
+    //}
+
+    //Navigate to Profile
+    public void profileNav(ActionEvent event){
+        System.out.println("Test");
+    }
+
+
     //Navigation
     public void navigate() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainScreen.fxml"));
@@ -130,7 +174,7 @@ public class MainScreen extends Application {
         MealReelApplication.stage.getScene().setRoot(MealReelApplication.mainScreen);
     }
  
- public static void main(String[] args) {
+    public static void main(String[] args) {
         launch(args);
     }
 }

@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-public class ProfileCustomer extends Application {
+public class ProfileCustomer extends Application implements Navigable{
 
     @FXML
     private ImageView profCusBackButton;
@@ -39,26 +39,24 @@ public class ProfileCustomer extends Application {
     private Button profCusRevHistory;
 
     @FXML
-    private TextField profCusTFAdress;
+    public TextField profCusTFAdress;
 
     @FXML
-    private TextField profCusTFEmail;
+    public TextField profCusTFEmail;
 
     @FXML
-    private TextField profCusTFName;
+    public TextField profCusTFName;
 
     @FXML
-    private TextField profCusTFPhone;
+    public TextField profCusTFPhone;
 
     @FXML
-    private TextField profCusTFRecComment;
+    public TextField profCusTFRecComment;
 
     public void start(Stage primaryStage) {
         //Set ImageView pictures
         //profCusPicture.setImage(profilePic);
         //profCusBackButton.setImage(backButton);
-
-        MealReelApplication.listOfUsers();
 
         try {
             Parent root = FXMLLoader.load(getClass().getResource("ProfileCustomer.fxml"));
@@ -82,7 +80,9 @@ public class ProfileCustomer extends Application {
         MealReelApplication.stage.getScene().setRoot(MealReelApplication.profileCus);
     }
  
- public static void main(String[] args) {
+    public static void main(String[] args) {
         launch(args);
     }
+
+
 }
