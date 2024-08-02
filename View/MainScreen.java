@@ -110,36 +110,37 @@ public class MainScreen extends Application implements Navigable{
     public void profileNav(ActionEvent event){
         if (LoginAsCustomer.loggedInAsCus == true) {
             ProfileCustomer profileCustomer = new ProfileCustomer();
+            profileCustomer.navigate();
+            Customer customerTemp = (Customer) MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1);
             profileCustomer.profCusTFName.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
                 MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getUsername());
             profileCustomer.profCusTFAdress.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
                 MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getAddress().toString());
             profileCustomer.profCusTFEmail.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
                 MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getEmail());
-            profileCustomer.profCusTFRealName.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
-                MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getCustName());
-            profileCustomer.profCusTFRealSurname.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
-                MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getCustSurname());
-            profileCustomer.profCusTFRecComment.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
-                MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getCommentsGivenByCustomer().get(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1));
-            profileCustomer.navigate();
+            profileCustomer.profCusTFRealName.setText(customerTemp.getCustName());
+            profileCustomer.profCusTFRealSurname.setText(customerTemp.getCustSurname());
+            //profileCustomer.profCusTFRecComment.setText(customerTemp.getCommentsGivenByCustomer);
+            
         }else if (LoginAsRestaurantOwner.loggedInAsOwner == true) {
             ProfileOwner profileOwner = new ProfileOwner();
-            profileOwner.profOwnTFName.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
-                MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getUsername());
-            profileOwner.profOwnTFAdress.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
-                MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getAddress().toString());
-            profileOwner.profOwnTFEmail.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
-                MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getEmail());
-            profileOwner.profOwnTFPhone.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
-                MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getPhoneNumber());
-            profileOwner.profOwnTFDesc.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
-                MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getDescription());
-            profileOwner.profOwnTFRating.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
-                MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getGivenRatings().toString());
+            //profileOwner.profOwnTFName.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+            //    MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getUsername());
+            //profileOwner.profOwnTFAdress.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+            //    MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getAddress().toString());
+            //profileOwner.profOwnTFEmail.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+            //    MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getEmail());
+            //profileOwner.profOwnTFPhone.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+            //    MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getPhoneNumber());
+            //profileOwner.profOwnTFDesc.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+            //    MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getDescription());
+            //profileOwner.profOwnTFRating.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+            //    MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getGivenRatings().toString());
             profileOwner.navigate();
         }
     }
+    
 
     //Search button function
     public void search(ActionEvent event){
