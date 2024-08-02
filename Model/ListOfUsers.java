@@ -7,6 +7,8 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
+import java.util.Random;
+
 public class ListOfUsers {
     private ArrayList<User> users;
     public static MongoClient mongoClient;
@@ -14,6 +16,8 @@ public class ListOfUsers {
 
     public ListOfUsers() {
         users = new ArrayList<User>();
+
+        Random rnd = new Random();
 
         // Create a new MongoClient
         mongoClient = MongoClients.create(uri);
@@ -57,6 +61,7 @@ public class ListOfUsers {
 
         for (int i = 0; i < collection.countDocuments(); i++) 
         {
+            int random = rnd.nextInt(1,6);
             users.add(new RestaurantOwner(collection.find().skip(i).first().getString("restaurantName"),
                                         menu,
                                         collection.find().skip(i).first().getString("password"), 
@@ -64,7 +69,8 @@ public class ListOfUsers {
                                         collection.find().skip(i).first().getString("username"), 
                                         addressRes.get(i), 
                                         collection.find().skip(i).first().getString("phoneNumber"), 
-                                        collection.find().skip(i).first().getString("description"))) ;   
+                                        collection.find().skip(i).first().getString("description")));  
+            this.getRestaurantOwnersFromListOfUsers().get(i).setRating(random);                             
         }
         for (int i = 0; i < collection2.countDocuments(); i++) 
         {

@@ -39,3 +39,4 @@ public class MealReelApplication extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+}

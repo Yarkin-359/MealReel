@@ -96,6 +96,7 @@ public class RestaurantPage implements Navigable{
         addressText.appendText("Street: " + restaurantOwner.getAddress().getStreetName() + "\n");
         addressText.appendText("District Name: " + restaurantOwner.getAddress().getDistrictName() + "\n");
 
+        descText.appendText(restaurantOwner.getDescription());
 
         if(restaurantOwner.getRating() >= 2)
         {
@@ -217,7 +218,7 @@ public class RestaurantPage implements Navigable{
     {
         MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(index).addCommentsToRestaurant(userComment.getText());
         userComment.setText("");   
-        commentsText.appendText(/*listOfUsers.getCustomersFromListOfUsers().getLast().getUsername() + ":"*/ restaurantOwner.getCommentsOfRestaurant().get(restaurantOwner.getCommentsOfRestaurant().size() - 1));
+        commentsText.appendText(restaurantOwner.getCommentsOfRestaurant().get(restaurantOwner.getCommentsOfRestaurant().size() - 1));
         
         
     }
