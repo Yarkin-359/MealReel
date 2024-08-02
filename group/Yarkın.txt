@@ -1,0 +1,21 @@
+Before Course
+Since I knew beforehand that this course required a project and there was a holiday gap at the beginning of the course calendar, I had the opportunity to think about the intellectual part of the work in detail before even starting the project. 
+
+WEEK1
+So when we formed our group and started talking about the project idea, I already had an idea. I can say that other project members are also careful about this issue. We had three idea with mine. Others were game games, mine was a menu app. As a result, my friends agreed with my idea and we set to work to develop this idea. 
+
+WEEK1&2
+We set up a WhatsApp group and discussed our ideas here. We wrote down the ideas we could add to the project that came to our mind. I should say that I have serious contributions. I must say that I made serious contributions to the filtering mechanism, which is one of the basic functions of our application. For this, you examined similar applications and thought about how they could be improved, what could be added, what were the deficiencies. 
+
+WEEK 3 & 4
+Since we did not think that the report stages of our project were suitable for division of labor, we preferred to complete these stages together by
+
+WEEK 5
+sharing our ideas and reaching common decisions.(For example, we designed the scheme of our project together.) In the presentations, everyone presented their area of responsibility. Therefore, I was responsible for the sign up part. 
+Later, when it was time to implement our project, we preferred to divide the work into sections instead of dividing it into fronthand, backhand and database, and I took on the sign-up parts and adding menu to the database. 
+We kept in constant contact with each other to avoid any serious conflict issues. I also took care to ensure that my pages were compatible with those of my friends. Despite this, we kept in touch to resolve minor conflicts we had or to help each other. I sought help from my friends in some of the problems I encountered (javaFX setup) and did my best to help my friends in the same way (database). In order to improve the functionality of my own part, I paid particular attention to error situations and developed warnings that would clearly direct the user to what he should do in case of every error he made. 
+This are the class which I did completely: 
+signUpChoice signUpAsCustomer signUpRestaurantOwner createMenu 
+And also their pages. 
+
+FEVZİ YARKIN MÜFTÜOĞLU 22102577
