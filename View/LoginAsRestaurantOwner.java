@@ -66,6 +66,8 @@ public class LoginAsRestaurantOwner implements Navigable {
 
                 if(!isFound) {
                     login.setText("User not found");
+                    usernameOrEmail.setText("Enter your username or email");
+                    password.setText("Enter your password");
                 }else{
                     loggedInAsOwner = true;
                 }
@@ -82,7 +84,7 @@ public class LoginAsRestaurantOwner implements Navigable {
             @Override
             public void handle(ActionEvent event) {
                 SignUpChoice signUpChoice = new SignUpChoice();
-                signUpChoice.navigate(); 
+                //signUpChoice.navigate(); 
             }
 
         });
@@ -173,6 +175,8 @@ public class LoginAsRestaurantOwner implements Navigable {
 
             @Override
             public void handle(MouseEvent event) {
+                login.setText("Login");
+
                 if(textField.getText().equals(text)){
                     textField.setText("");   
                 }

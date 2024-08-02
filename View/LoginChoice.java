@@ -55,7 +55,7 @@ public class LoginChoice implements Navigable {
             @Override
             public void handle(ActionEvent event) {
                 SignUpChoice signUpChoice = new SignUpChoice();
-                signUpChoice.navigate();
+                //signUpChoice.navigate();
             }
         });
 
