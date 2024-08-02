@@ -41,27 +41,27 @@
                            </font>
                         </Text>
                         <Region maxWidth="800.0" prefHeight="31.0" prefWidth="33.0" HBox.hgrow="ALWAYS" />
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating1" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating2" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating3" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating4" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating5" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
@@ -80,27 +80,27 @@
                            </font>
                         </Text>
                         <Region maxWidth="800.0" prefHeight="26.0" prefWidth="32.0" HBox.hgrow="ALWAYS" />
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating6" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating7" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating8" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating9" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating10" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
@@ -119,27 +119,27 @@
                            </font>
                         </Text>
                         <Region maxWidth="800.0" prefHeight="26.0" prefWidth="31.0" HBox.hgrow="ALWAYS" />
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating11" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating12" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating13" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating14" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating15" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
@@ -158,27 +158,27 @@
                            </font>
                         </Text>
                         <Region maxWidth="800.0" prefHeight="26.0" prefWidth="31.0" HBox.hgrow="ALWAYS" />
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating16" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating17" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating18" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating19" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rating20" fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@emptyStar.png" />
                            </image>
@@ -226,11 +226,11 @@
          </children>
       </VBox>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd51a" height="858.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="66.0" />
-      <VBox fx:id="filter" layoutX="150.0" layoutY="60.0" prefHeight="306.0" prefWidth="402.0" visible="false" AnchorPane.leftAnchor="102.0" AnchorPane.rightAnchor="296.0">
+      <VBox fx:id="filter" layoutX="150.0" layoutY="60.0" maxWidth="1.7976931348623157E308" prefHeight="306.0" prefWidth="474.0" AnchorPane.leftAnchor="102.0" AnchorPane.rightAnchor="224.0">
          <children>
-            <Button focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="400.0" mnemonicParsing="false" VBox.vgrow="ALWAYS">
+            <Button fx:id="filterButton" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="636.0" mnemonicParsing="false" prefHeight="306.0" prefWidth="450.0" VBox.vgrow="ALWAYS">
                <graphic>
-                  <VBox prefHeight="298.0" prefWidth="328.0" spacing="5.0">
+                  <VBox prefHeight="298.0" prefWidth="458.0" spacing="5.0">
                      <children>
                         <RadioButton fx:id="radioButton1" focusTraversable="false" mnemonicParsing="false" onAction="#radioButton1" text="Sort by Alphabetical Order" />
                         <RadioButton fx:id="radioButton2" focusTraversable="false" mnemonicParsing="false" onAction="#radioButton2" text="Sort by popularity" />
