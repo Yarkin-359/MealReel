@@ -40,7 +40,7 @@ public class LoginAsRestaurantOwner implements Navigable {
         view.setPreserveRatio(true);
 
         //Text Field objects
-        TextField usernameOrEmail = createTextField("Enter your username or email");
+        TextField usernameOrEmail = createTextField("Enter your username");
         TextField password = createTextField("Enter your password");
 
         //a button object that proceed the user to main page
@@ -66,7 +66,7 @@ public class LoginAsRestaurantOwner implements Navigable {
 
                 if(!isFound) {
                     login.setText("User not found");
-                    usernameOrEmail.setText("Enter your username or email");
+                    usernameOrEmail.setText("Enter your username");
                     password.setText("Enter your password");
                 }else{
                     loggedInAsOwner = true;

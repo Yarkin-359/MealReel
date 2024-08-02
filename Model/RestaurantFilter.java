@@ -84,7 +84,14 @@ public class RestaurantFilter implements FilterableRestaurant{
                 //if an element is removed we need to adjust the index of the cursor to avoid skipping an element
                 n--;
             }
-        }    
+        }  
+        
+        for (int i = 0; i < restaurantOwners.size() - 1; i++) {
+            if(!filteredRestaurantOwners.get(0).getRestaurantName().equalsIgnoreCase(restaurantOwners.get(i).getRestaurantName()))
+            {
+                filteredRestaurantOwners.add(restaurantOwners.get(i));
+            }
+        }
     }
 
     //filters the restaurants in a way that only the restaurants which include the given item are shown

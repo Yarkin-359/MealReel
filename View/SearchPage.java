@@ -158,6 +158,8 @@ public class SearchPage implements Navigable{
         {
             restaurantFilter.resetFilter();
         }
+
+        restaurantFilter.includesGivenRestaurantName(MainScreen.searchString);
         
         text1.setText(restaurantFilter.getFilteredRestaurants().get(0 + (4*pageNumber)).getRestaurantName());
         text2.setText(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)).getRestaurantName());
