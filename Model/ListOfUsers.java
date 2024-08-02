@@ -30,19 +30,11 @@ public class ListOfUsers {
         MongoCollection<Document> collection2 = database.getCollection("Customers");
 
         Menu menu = new Menu();
-        ArrayList<Address> addressRes = new ArrayList<>();
         ArrayList<Address> addressCus = new ArrayList<>();
            
         MongoCollection<Document> menus = database.getCollection("Menus");
         MongoCollection<Document> adresses = database.getCollection("Adresses");
 
-        for (int j = 0; j < adresses.countDocuments(); j++) 
-        {
-                
-            addressRes.add(new Address(adresses.find().skip(j).first().getString("streetName"),
-                            adresses.find().skip(j).first().getString("districtName"), 
-                            adresses.find().skip(j).first().getString("cityName")));
-        }
         for (int j = 0; j < adresses.countDocuments(); j++) 
         {
                 
@@ -62,12 +54,15 @@ public class ListOfUsers {
         for (int i = 0; i < collection.countDocuments(); i++) 
         {
             int random = rnd.nextInt(1,6);
+            Address address = new Address(collection.find().skip(i).first().getString("streetName"),
+                                        collection.find().skip(i).first().getString("districtName"), 
+                                        collection.find().skip(i).first().getString("cityName"));
             users.add(new RestaurantOwner(collection.find().skip(i).first().getString("restaurantName"),
                                         menu,
                                         collection.find().skip(i).first().getString("password"), 
                                         collection.find().skip(i).first().getString("email"), 
                                         collection.find().skip(i).first().getString("username"), 
-                                        addressRes.get(i), 
+                                        address, 
                                         collection.find().skip(i).first().getString("phoneNumber"), 
                                         collection.find().skip(i).first().getString("description")));  
             this.getRestaurantOwnersFromListOfUsers().get(i).setRating(random);                             

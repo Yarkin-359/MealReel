@@ -36,6 +36,14 @@ public class SearchPage implements Navigable{
 
     @FXML
     private Button filterButton;
+    @FXML
+    private Button myButton1;
+    @FXML
+    private Button myButton2;
+    @FXML
+    private Button myButton3;
+    @FXML
+    private Button myButton4;
 
     @FXML
     private FXMLLoader fxmlLoader2 = new FXMLLoader(getClass().getResource("RestaurantPage.fxml"));
@@ -125,7 +133,9 @@ public class SearchPage implements Navigable{
 
     @FXML
     void initialize() 
-    {      
+    {     
+        filter.setVisible(false);
+
         rating1.setImage(filledStar);
         rating6.setImage(filledStar);
         rating11.setImage(filledStar);
@@ -196,30 +206,72 @@ public class SearchPage implements Navigable{
     public void page1(ActionEvent event)
     {
         pageNumber = 0;
+
         text1.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(0 + (4*pageNumber)).getRestaurantName());
         text2.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(1 + (4*pageNumber)).getRestaurantName());
         text3.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(2 + (4*pageNumber)).getRestaurantName());
         text4.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(3 + (4*pageNumber)).getRestaurantName());
+
+        setStars1(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(0 + (4*pageNumber)));
+        setStars2(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(1 + (4*pageNumber)));
+        setStars3(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(2 + (4*pageNumber)));
+        setStars4(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(3 + (4*pageNumber)));
     }
     public void page2(ActionEvent event)
     {
         pageNumber = 1;
+
         text1.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(0 + (4*pageNumber)).getRestaurantName());
         text2.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(1 + (4*pageNumber)).getRestaurantName());
         text3.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(2 + (4*pageNumber)).getRestaurantName());
         text4.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(3 + (4*pageNumber)).getRestaurantName());
+
+        setStars1(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(0 + (4*pageNumber)));
+        setStars2(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(1 + (4*pageNumber)));
+        setStars3(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(2 + (4*pageNumber)));
+        setStars4(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(3 + (4*pageNumber)));
     }
     public void page3(ActionEvent event)
     {
         pageNumber = 2;
+
+        text1.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(0 + (4*pageNumber)).getRestaurantName());
+        text2.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(1 + (4*pageNumber)).getRestaurantName());
+        text3.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(2 + (4*pageNumber)).getRestaurantName());
+        text4.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(3 + (4*pageNumber)).getRestaurantName());
+
+        setStars1(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(0 + (4*pageNumber)));
+        setStars2(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(1 + (4*pageNumber)));
+        setStars3(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(2 + (4*pageNumber)));
+        setStars4(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(3 + (4*pageNumber)));
     }
     public void page4(ActionEvent event)
     {
         pageNumber = 3;
+
+        text1.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(0 + (4*pageNumber)).getRestaurantName());
+        text2.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(1 + (4*pageNumber)).getRestaurantName());
+        text3.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(2 + (4*pageNumber)).getRestaurantName());
+        text4.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(3 + (4*pageNumber)).getRestaurantName());
+  
+        setStars1(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(0 + (4*pageNumber)));
+        setStars2(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(1 + (4*pageNumber)));
+        setStars3(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(2 + (4*pageNumber)));
+        setStars4(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(3 + (4*pageNumber)));
     }
     public void page5(ActionEvent event)
     {
         pageNumber = 4;
+
+        text1.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(0 + (4*pageNumber)).getRestaurantName());
+        text2.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(1 + (4*pageNumber)).getRestaurantName());
+        text3.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(2 + (4*pageNumber)).getRestaurantName());
+        text4.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(3 + (4*pageNumber)).getRestaurantName());
+    
+        setStars1(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(0 + (4*pageNumber)));
+        setStars2(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(1 + (4*pageNumber)));
+        setStars3(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(2 + (4*pageNumber)));
+        setStars4(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(3 + (4*pageNumber)));
     }
 
     public void filter(ActionEvent event)
@@ -248,6 +300,11 @@ public class SearchPage implements Navigable{
         text3.setText(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)).getRestaurantName());
         text4.setText(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)).getRestaurantName());
 
+        setStars1(restaurantFilter.getFilteredRestaurants().get(0 + (4*pageNumber)));
+        setStars2(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)));
+        setStars3(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)));
+        setStars4(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)));
+
     }
     public void radioButton2(ActionEvent event)
     {
@@ -267,6 +324,11 @@ public class SearchPage implements Navigable{
         text2.setText(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)).getRestaurantName());
         text3.setText(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)).getRestaurantName());
         text4.setText(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)).getRestaurantName());
+
+        setStars1(restaurantFilter.getFilteredRestaurants().get(0 + (4*pageNumber)));
+        setStars2(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)));
+        setStars3(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)));
+        setStars4(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)));
     }
     public void radioButton3(ActionEvent event)
     {
@@ -286,6 +348,11 @@ public class SearchPage implements Navigable{
         text2.setText(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)).getRestaurantName());
         text3.setText(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)).getRestaurantName());
         text4.setText(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)).getRestaurantName());
+
+        setStars1(restaurantFilter.getFilteredRestaurants().get(0 + (4*pageNumber)));
+        setStars2(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)));
+        setStars3(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)));
+        setStars4(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)));
     }
     public void radioButton4(ActionEvent event)
     {
@@ -305,6 +372,11 @@ public class SearchPage implements Navigable{
         text2.setText(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)).getRestaurantName());
         text3.setText(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)).getRestaurantName());
         text4.setText(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)).getRestaurantName());
+
+        setStars1(restaurantFilter.getFilteredRestaurants().get(0 + (4*pageNumber)));
+        setStars2(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)));
+        setStars3(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)));
+        setStars4(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)));
     }
 
     public void textFile1(ActionEvent event)
@@ -314,6 +386,11 @@ public class SearchPage implements Navigable{
         text2.setText(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)).getRestaurantName());
         text3.setText(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)).getRestaurantName());
         text4.setText(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)).getRestaurantName());
+
+        setStars1(restaurantFilter.getFilteredRestaurants().get(0 + (4*pageNumber)));
+        setStars2(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)));
+        setStars3(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)));
+        setStars4(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)));
     }
     public void textFile2(ActionEvent event)
     {
@@ -323,6 +400,11 @@ public class SearchPage implements Navigable{
         text2.setText(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)).getRestaurantName());
         text3.setText(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)).getRestaurantName());
         text4.setText(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)).getRestaurantName());
+
+        setStars1(restaurantFilter.getFilteredRestaurants().get(0 + (4*pageNumber)));
+        setStars2(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)));
+        setStars3(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)));
+        setStars4(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)));
     }
     public void textFile3(ActionEvent event)
     {
@@ -332,6 +414,11 @@ public class SearchPage implements Navigable{
         text2.setText(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)).getRestaurantName());
         text3.setText(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)).getRestaurantName());
         text4.setText(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)).getRestaurantName());
+
+        setStars1(restaurantFilter.getFilteredRestaurants().get(0 + (4*pageNumber)));
+        setStars2(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)));
+        setStars3(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)));
+        setStars4(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)));
     }
     public void textFile4(ActionEvent event)
     {
@@ -341,6 +428,11 @@ public class SearchPage implements Navigable{
         text2.setText(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)).getRestaurantName());
         text3.setText(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)).getRestaurantName());
         text4.setText(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)).getRestaurantName());
+
+        setStars1(restaurantFilter.getFilteredRestaurants().get(0 + (4*pageNumber)));
+        setStars2(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)));
+        setStars3(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)));
+        setStars4(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)));
     }
     public void textFile5(ActionEvent event)
     {
@@ -350,6 +442,11 @@ public class SearchPage implements Navigable{
         text2.setText(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)).getRestaurantName());
         text3.setText(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)).getRestaurantName());
         text4.setText(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)).getRestaurantName());
+
+        setStars1(restaurantFilter.getFilteredRestaurants().get(0 + (4*pageNumber)));
+        setStars2(restaurantFilter.getFilteredRestaurants().get(1 + (4*pageNumber)));
+        setStars3(restaurantFilter.getFilteredRestaurants().get(2 + (4*pageNumber)));
+        setStars4(restaurantFilter.getFilteredRestaurants().get(3 + (4*pageNumber)));
     }
     public void textFile6(ActionEvent event)
     {
@@ -371,17 +468,32 @@ public class SearchPage implements Navigable{
         {
             rating1.setImage(filledStar);
             rating2.setImage(filledStar);
+            rating3.setImage(emptyStar);
+            rating4.setImage(emptyStar);
+            rating5.setImage(emptyStar);
         }
         if(restaurantOwner.getRating() >= 3)
         {
+            rating1.setImage(filledStar);
+            rating2.setImage(filledStar);
             rating3.setImage(filledStar);
+            rating4.setImage(emptyStar);
+            rating5.setImage(emptyStar);
         }
         if(restaurantOwner.getRating() >= 4)
         {
+            rating1.setImage(filledStar);
+            rating2.setImage(filledStar);
+            rating3.setImage(filledStar);
             rating4.setImage(filledStar);
+            rating5.setImage(emptyStar);
         }
         if(restaurantOwner.getRating() > 5)
         {
+            rating1.setImage(filledStar);
+            rating2.setImage(filledStar);
+            rating3.setImage(filledStar);
+            rating4.setImage(filledStar);
             rating5.setImage(filledStar);
         }
     }
@@ -392,17 +504,32 @@ public class SearchPage implements Navigable{
         {
             rating6.setImage(filledStar);
             rating7.setImage(filledStar);
+            rating8.setImage(emptyStar);
+            rating9.setImage(emptyStar);
+            rating10.setImage(emptyStar);
         }
         if(restaurantOwner.getRating() >= 3)
         {
+            rating6.setImage(filledStar);
+            rating7.setImage(filledStar);
             rating8.setImage(filledStar);
+            rating9.setImage(emptyStar);
+            rating10.setImage(emptyStar);
         }
         if(restaurantOwner.getRating() >= 4)
         {
+            rating6.setImage(filledStar);
+            rating7.setImage(filledStar);
+            rating8.setImage(filledStar);
             rating9.setImage(filledStar);
+            rating10.setImage(emptyStar);
         }
         if(restaurantOwner.getRating() > 5)
         {
+            rating6.setImage(filledStar);
+            rating7.setImage(filledStar);
+            rating8.setImage(filledStar);
+            rating9.setImage(filledStar);
             rating10.setImage(filledStar);
         }
     }
@@ -412,18 +539,33 @@ public class SearchPage implements Navigable{
         {
             rating11.setImage(filledStar);
             rating12.setImage(filledStar);
+            rating13.setImage(emptyStar);
+            rating14.setImage(emptyStar);
+            rating15.setImage(emptyStar);
         }
         if(restaurantOwner.getRating() >= 3)
         {
+            rating11.setImage(filledStar);
+            rating12.setImage(filledStar);
             rating13.setImage(filledStar);
+            rating14.setImage(emptyStar);
+            rating15.setImage(emptyStar);
         }
         if(restaurantOwner.getRating() >= 4)
         {
+            rating11.setImage(filledStar);
+            rating12.setImage(filledStar);
+            rating13.setImage(filledStar);
             rating14.setImage(filledStar);
+            rating15.setImage(emptyStar);
         }
         if(restaurantOwner.getRating() > 5)
         {
-            rating16.setImage(filledStar);
+            rating11.setImage(filledStar);
+            rating12.setImage(filledStar);
+            rating13.setImage(filledStar);
+            rating14.setImage(filledStar);
+            rating15.setImage(filledStar);
         }
     }
     public void setStars4(RestaurantOwner restaurantOwner)
@@ -432,17 +574,32 @@ public class SearchPage implements Navigable{
         {
             rating16.setImage(filledStar);
             rating17.setImage(filledStar);
+            rating18.setImage(emptyStar);
+            rating19.setImage(emptyStar);
+            rating20.setImage(emptyStar);
         }
         if(restaurantOwner.getRating() >= 3)
         {
+            rating16.setImage(filledStar);
+            rating17.setImage(filledStar);
             rating18.setImage(filledStar);
+            rating19.setImage(emptyStar);
+            rating20.setImage(emptyStar);
         }
         if(restaurantOwner.getRating() >= 4)
         {
+            rating16.setImage(filledStar);
+            rating17.setImage(filledStar);
+            rating18.setImage(filledStar);
             rating19.setImage(filledStar);
+            rating20.setImage(emptyStar);
         }
         if(restaurantOwner.getRating() > 5)
         {
+            rating16.setImage(filledStar);
+            rating17.setImage(filledStar);
+            rating18.setImage(filledStar);
+            rating19.setImage(filledStar);
             rating20.setImage(filledStar);
         }
     }
