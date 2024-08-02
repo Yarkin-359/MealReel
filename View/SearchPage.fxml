@@ -200,8 +200,8 @@
                   </ImageView>
                </graphic>
             </Button>
-            <TextField focusTraversable="false" maxWidth="800.0" minWidth="230.0" prefHeight="26.0" prefWidth="274.0" HBox.hgrow="ALWAYS" />
-            <Button focusTraversable="false" mnemonicParsing="false" opacity="0.42" prefHeight="26.0" prefWidth="28.0" HBox.hgrow="ALWAYS">
+            <TextField fx:id="searchText" focusTraversable="false" maxWidth="800.0" minWidth="230.0" prefHeight="26.0" prefWidth="274.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="search" focusTraversable="false" mnemonicParsing="false" onAction="#search" opacity="0.42" prefHeight="26.0" prefWidth="28.0" HBox.hgrow="ALWAYS">
                <graphic>
                   <ImageView fitHeight="16.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -236,13 +236,15 @@
                         <RadioButton fx:id="radioButton2" focusTraversable="false" mnemonicParsing="false" onAction="#radioButton2" text="Sort by popularity" />
                         <RadioButton fx:id="radioButton3" focusTraversable="false" mnemonicParsing="false" onAction="#radioButton3" text="Sort by Rating" />
                         <RadioButton fx:id="radioButton4" focusTraversable="false" mnemonicParsing="false" onAction="#radioButton4" text="Sort by Total Discount of Items" />
-                        <TextField fx:id="textField1" focusTraversable="false" onAction="#textFile1" onInputMethodTextChanged="#textFile1" promptText="Enter the name of the item to be searched" />
-                        <TextField fx:id="textField2" focusTraversable="false" onAction="#textFile2" promptText="Enter the type of the item to be searched" />
-                        <TextField fx:id="textField3" focusTraversable="false" onAction="#textFile3" promptText="Enter a city to show the restaurants that can be found in the entered city" />
-                        <TextField fx:id="textField4" focusTraversable="false" onAction="#textFile4" promptText="Enter a district to show the restaurants that can be found in the entered district" />
-                        <TextField fx:id="textField5" focusTraversable="false" onAction="#textFile5" promptText="Enter a street to show the restaurants that can be found in the entered street" />
-                        <TextField fx:id="textField6" focusTraversable="false" onAction="#textFile6" promptText="Enter the lower boundary of the price range for the items" />
-                        <TextField fx:id="textField7" focusTraversable="false" onAction="#textFile7" promptText="Enter the upper boundary of the price range for the items" />
+                        <TextField fx:id="textField1" focusTraversable="false" promptText="Enter the name of the item to be searched" />
+                        <TextField fx:id="textField2" focusTraversable="false" promptText="Enter the type of the item to be searched" />
+                        <TextField fx:id="textField3" focusTraversable="false" promptText="Enter a city to show the restaurants that can be found in the entered city" />
+                        <TextField fx:id="textField4" focusTraversable="false" promptText="Enter a district to show the restaurants that can be found in the entered district" />
+                        <TextField fx:id="textField5" focusTraversable="false" promptText="Enter a street to show the restaurants that can be found in the entered street" />
+                        <TextField fx:id="textField6" focusTraversable="false" promptText="Enter the lower boundary of the price range for the items" />
+                        <TextField fx:id="textField7" focusTraversable="false" promptText="Enter the upper boundary of the price range for the items" />
+                        <Button fx:id="applyFilter" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#apply" text="Apply Filter" VBox.vgrow="ALWAYS" />
+                        <Button fx:id="resetFilterButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#resetFilter" prefHeight="26.0" prefWidth="146.0" text="Reset Filter" VBox.vgrow="ALWAYS" />
                      </children>
                   </VBox>
                </graphic>

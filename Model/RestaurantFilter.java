@@ -64,6 +64,29 @@ public class RestaurantFilter implements FilterableRestaurant{
         }    
     }
 
+    @Override
+    public void includesGivenRestaurantName(String restaurantName) {
+        String name;
+        boolean isFound;
+
+        //the first loop iterates through the list of filtered restaurant owners
+        for(int n = 0; n < filteredRestaurantOwners.size(); n++) {
+            isFound = false;
+            name = filteredRestaurantOwners.get(n).getRestaurantName();
+
+            if(name.equalsIgnoreCase(restaurantName)) {
+                isFound = true;
+            }
+
+            //if the given type is not found in anywhere of the menu, this restaurant is removed from the filtered restaurants list
+            if(!isFound) {
+                filteredRestaurantOwners.remove(n);
+                //if an element is removed we need to adjust the index of the cursor to avoid skipping an element
+                n--;
+            }
+        }    
+    }
+
     //filters the restaurants in a way that only the restaurants which include the given item are shown
     @Override
     public void includesGivenItem(String name) {

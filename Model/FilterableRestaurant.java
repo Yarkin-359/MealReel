@@ -9,4 +9,5 @@ public interface FilterableRestaurant {
     public void isFoundInGivenCity(String city);
     public void isFoundInGivenDistrict(String district);
     public void isFoundInGivenStreet(String street);
+    public void includesGivenRestaurantName(String restaurantName);
 }

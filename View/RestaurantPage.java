@@ -23,10 +23,11 @@ public class RestaurantPage implements Navigable{
     private VBox CommentBox;
 
     @FXML
+    public static RestaurantFilter restaurantFilter = SearchPage.restaurantFilter;
     private boolean commentCheck = false;
     private int pageNumber = SearchPage.pageNumber;
     private int index = (4 * pageNumber) + SearchPage.index;
-    private RestaurantOwner restaurantOwner = MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(index);
+    private RestaurantOwner restaurantOwner = restaurantFilter.getFilteredRestaurants().get(index);
 
     @FXML
     private TextArea addressText;
