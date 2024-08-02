@@ -1,0 +1,31 @@
+Week 1
+While we were thinking about the project idea, I suggested making an online chess game,
+but we did choose the menu application idea. About the menu application idea, I suggested that
+the application should be more local and only include restaurants in Ankara to make data
+collecting easier for us. 
+
+Week 2
+In the first presentation, I did not present any slides, but I helped write
+the text of the presentation. After that stage we decided which pages our application should have
+and divided those pages between us. I got the search page which searches and filters the
+restaurants for the user and the restaurant page which opens after the user selects a restaurant
+from the search page. 
+
+Week 3
+I designed the Ui for the search page and restaurant page and I presented
+these pages in the second presentation. I also did the sitemap for the second presentation. I wrote
+the functionalities of the restaurant page and search page in the report. 
+
+Week 4
+I coded the Gui for search page and restaurant page using javafx and scene builder. I did the Uml diagram for the
+report. 
+
+Week5
+I coded all the functionalities for the search page and restaurant page. In the search page
+there were functionalities such as making a search, filtering the search, changing the pages
+through scroll buttons, and choosing a restaurant from the restaurant list. In the restaurant page
+there were functionalities such as adding comments to the restaurant or rating the restaurant.
+After that I implemented the MongoDB database to our project. I learned the methods of
+MongoDB and use them to store the essential variables in the database such as list of users which
+stores the restaurant owners and the customers. Finally, I presented the code part and
+the functionalities of the search page and restaurant page in the final presentation.
