@@ -136,6 +136,26 @@ public class ProfileCustomer extends Application implements Navigable{
 
     //Navigation
     public void navigate() {
+
+        Customer customerTemp = (Customer) MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1);
+                
+        profCusTFName.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getUsername());
+        profCusTFAdress.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getAddress().toString());
+        profCusTFEmail.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getEmail());
+        profCusTFRealName.setText(customerTemp.getCustName());
+        profCusTFRealSurname.setText(customerTemp.getCustSurname());
+
+        profCusReviewHistoryTF.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
+            MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getCommentsGivenByCustomer().get(0));
+        for (int index = 1; index < (MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1); index++) {
+            profCusReviewHistoryTF.setText(profCusReviewHistoryTF + MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
+            MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getCommentsGivenByCustomer().get(index));
+        }
+
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ProfileCustomer.fxml"));
 
         try {
