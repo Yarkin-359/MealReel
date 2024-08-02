@@ -65,6 +65,8 @@ public class LoginAsCustomer implements Navigable{
 
                 if(!isFound) {
                     login.setText("User not found");
+                    usernameOrEmail.setText("Enter your username or email");
+                    password.setText("Enter your password");
                 } 
             }
 
@@ -79,7 +81,7 @@ public class LoginAsCustomer implements Navigable{
             @Override
             public void handle(ActionEvent event) {
                 SignUpChoice signUpChoice = new SignUpChoice();
-                signUpChoice.navigate();
+                //signUpChoice.navigate();
             }
 
         });
