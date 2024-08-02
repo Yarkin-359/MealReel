@@ -1,0 +1,106 @@
+Week 1
+
+I proposed a concept for a game that includes five mini-games, as our
+group has five members. This idea would facilitate an equitable distribution of
+tasks, with each person focusing on one mini game. I also outlined the core
+content for each mini game. The first game features four separate horses,
+each with a stamina bar that replenishes over time. The objective is to press a
+specific button that speeds up the horse and reduces the stamina, the player
+should reach the finish line without depleting the stamina. The second game
+would be a game that involves pressing the correct buttons during the
+allocated time, the process would speed up until the player is unable to push
+the incorrect button or unable to press the correct button during the allocated
+time. In the third game, players need to select the correct piece from a set of
+pieces and fit it into an incomplete section that can be completed with one of
+the given pieces. The fourth game is a simple platform runner where players
+must avoid obstacles and reach the finish line. The fifth game involves looping
+railways and carts equipped with shooting capabilities, where the goal is to
+shoot at the backs of other carts. This idea was discontinued since we do not
+have much experience with making games and we have a limited amount of
+time so instead we moved on to a simpler recommendation app that involves
+restaurants.
+
+Week 2
+
+I proposed several ideas for some filtering features to enhance the app.
+We can categorize foods into types, allowing users to search for a specific
+type of food. We can implement a feature that lets users enter a price range
+for food, so only restaurants with menu items within that range are displayed.
+Additionally, we can sort the restaurants by their ratings, popularity (number
+of ratings given), total discount of their items and by alphabetical order of
+their names. Also, we can let the users to see the restaurants that are
+available within their city, district or street.
+
+Week 3
+
+Using the Bubble app, I designed the login pages for the customer and
+restaurant owner. I designed the page that gives the option to login as a
+customer or restaurant owner. After designing these pages, I realized that
+there should be a page for filtering as well. Since this thought did not occur to
+us at the beginning of the designing the user interface stage and was not
+included in the process of distributing the workload, I took over the creation
+process of this page due to the similarity of its design with the previous pages
+I had done. Moreover, I presented the login pages for customers and
+restaurant owners for the user interface presentation. I explained the idea
+behind the design of these pages and where the user can go from these
+pages.
+
+Week 4
+
+I wanted to take over most of the workload for the model part of the
+app. As a group, we decided some of the classes that should be present such
+as a User class which should have subclasses called Customer and
+Restaurant Owner. Also, we decided that we should have an Item and Menu
+class. After deciding some of the instance data members of these classes as
+a group as well, I started working on the model part individually. I created an
+additional class called Address which is useful for the Restaurant Owner
+class. I created a List of Users class which is used to get the users from the
+database each time it's instantiated. I added some sorting functionality for
+the Menu class such as sorting the items by their names, prices, discount
+rates and types. I created an interface called Sortable Menu to make sure that
+this Menu class inherits the necessary sorting features. I created a Restaurant
+Filter class. I implemented the filtering features of this class. These features
+involve sorting the restaurants by their ratings, popularity (number of ratings
+they have), total discount of items, names according to alphabetical order.
+They also involve the ability to find the restaurants with the given item's name,
+type or price. For the price part, the user can enter a price range which will
+show the restaurants that have at least one item that falls within that price
+range. Furthermore, these features involve finding the restaurants that can be
+found within a particular city, district or street. I decided to use bubble sort for
+the sorting features since the data that our app will work with will be
+comparatively small. I also added a method to this Restaurant Filter class to
+reset the filter. I get the restaurant owners through the List of Users class
+which includes a method to only find the users that belong to the Restaurant
+Owner class. After using this method, I clone this list to a different list so that
+using the filter does not affect the original list. I created an interface called
+Filterable Restaurant to make sure that the Restaurant Filter class
+implements the necessary filtering features.
+
+Week 5
+
+My workload for this part was to create the classes Filter Screen, Login
+as Customer, Login as Business Owner and Login Choice. I started with the
+class Login Choice since the first page we see after running the Meal Reel
+application would be this page. I decided to use JavaFX. Before starting to
+design my own pages, I told my group that we should change the root of the
+scene to traverse between pages. This was the best way to ensure that there
+is a smooth transition between pages. I added a feature that prevents the
+users from exiting Fullscreen mode by pressing the escape button. I added a
+Navigable interface to make sure that every class that implements it can be
+accessed through another page. After all of this, I implemented the Login
+Choice class first. Then, the Login as Customer and Login as Restaurant
+Owner classes. Lastly, I designed the Filter Screen class. The Filter Screen
+class includes Radio Button objects for the sorting features and Text Field
+objects for the features that are about finding certain elements in the
+restaurant's instance data members. For all these classes, the Text Field
+object has a feature which deletes the writing if the mouse cursor enters the
+border of that object. If nothing is written after this deletion process, the
+previous writing such as "enter your password" reappears. If something is
+indeed written, it remains unchanged. The buttons of these classes turn into a
+different color if the mouse cursor enters the border of that object. After
+everybody designed their own parts for the view classes, I added the
+functionality of the buttons regarding what they should do when they are
+clicked on. Also, I added a Navigable interface that ensures every class that
+implements it must have a "navigate" method that sets the root of the scene
+to the current root. Changing the root of the scene provides a smoother
+transition between pages than changing the scene itself.
