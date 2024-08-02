@@ -111,6 +111,8 @@ public class ProfileOwner extends Application implements Navigable{
 
     //Navigation
     public void navigate() {
+        
+
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ProfileOwner.fxml"));
 
         try {
