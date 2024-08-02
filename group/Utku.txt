@@ -1,0 +1,43 @@
+Weekly Progress Log
+
+Week-1
+o I have personally found and approached the members of our group for them to join.
+o I have personally written the required report by hand with the suggestions from my group
+members
+o I came up with the name of our application and group and drawn the logo design.
+Week-2
+o I have created the requirements stage presentation by myself.
+o I have personally presented the requirements stage presentation by myself.
+o I have personally come up with the definition, features, target audiences, advantages, and
+similar applications of our project by myself.
+Week-3
+o I have personally designed the application main screen, user profile and business profile user
+interfaces.
+o I have created the slide pages for the application main screen, user profile and business
+profile.
+o I have presented the application main screen, user profile and business profile slides during
+our group’s slide presentation.
+o I created the overall design and page structure of our presentation.
+o I have also modified and fixed the issues with other slides in order to create the final version
+of the presentation slide.
+Week-4
+o I have personally written the text and added the screenshots of the main screen, customer
+profile and owner profile parts of the report.
+o I have helped in writing the introduction of the report.
+Week-5
+o I have personally written the introduction part of the report.
+o I have created the System overview graphic and written the related text with the help of
+Berkay.
+o I have written the task assignment part with the after discussing it with my group members.
+o I also fixed any issues regarding the formatting of the report.
+Week-5
+o I have personally added the required screenshots of our GUI’s and formatted them.
+o I have personally written the missing conclusion part of the report.
+Week-5&6
+o I have personally created the customer profile, owner profile and main screen user interface
+designs.
+o I have also created the necessary java files for these pages to function.
+o I have personally integrated these pages to work with the application.
+o I helped in the modeling (backend) part of the code by designing the pseudo and initial
+versions of the code and afterwards helped Berkay write the code related to the above pages
+for the final version.
