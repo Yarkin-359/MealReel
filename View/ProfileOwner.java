@@ -1,5 +1,6 @@
 import java.io.IOException;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,7 +13,13 @@ import javafx.scene.image.ImageView;
 public class ProfileOwner extends Application implements Navigable{
 
     @FXML
-    private ImageView profOwnBackButton;
+    private ImageView profOwnBackButtonImage;
+
+    @FXML
+    private ImageView profOwnStar;
+
+    @FXML
+    private Button profOwnBackButton;
 
     @FXML
     private Button profOwnChangeAdress;
@@ -36,25 +43,22 @@ public class ProfileOwner extends Application implements Navigable{
     private Button profOwnChangePic;
 
     @FXML
-    private ImageView profOwnPicture;
+    public TextField profOwnTFAdress;
 
     @FXML
-    private TextField profOwnTFAdress;
+    public TextField profOwnTFDesc;
 
     @FXML
-    private TextField profOwnTFDesc;
+    public TextField profOwnTFEmail;
 
     @FXML
-    private TextField profOwnTFEmail;
+    public TextField profOwnTFName;
 
     @FXML
-    private TextField profOwnTFName;
+    public TextField profOwnTFPhone;
 
     @FXML
-    private TextField profOwnTFPhone;
-
-    @FXML
-    private TextField profOwnTFRating;
+    public TextField profOwnTFRating;
 
     public void start(Stage primaryStage) {
         try {
@@ -65,6 +69,44 @@ public class ProfileOwner extends Application implements Navigable{
             primaryStage.show();
         } catch (IOException e) {
         }
+    }
+    
+    //Change Buttons
+    public void profOwnChangeName(ActionEvent event){
+        (MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+            MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1)).setUsername(profOwnTFName.getText());
+        profOwnTFName.setText("Username has been updated.");
+    }
+    public void profOwnChangeAdress(ActionEvent event){
+        String[] address = (profOwnTFAdress.getText()).split(",");
+        Address newAddress = new Address("", "", "");
+        newAddress.setStreetName(address[0]);
+        newAddress.setDistrictName(address[1]);
+        newAddress.setCityName(address[2]);
+        (MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+            MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1)).setAddress(newAddress);
+        profOwnTFAdress.setText("Address has been updated.");
+    }
+    public void profOwnChangeEmail(ActionEvent event){
+        (MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+            MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1)).setEmail(profOwnTFEmail.getText());
+        profOwnTFEmail.setText("Email has been updated.");
+    }
+    public void profOwnChangeDesc(ActionEvent event){
+        (MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+            MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1)).setDescription(profOwnTFDesc.getText());
+            profOwnTFDesc.setText("Description has been updated.");
+    }
+    public void profOwnChangePhone(ActionEvent event){
+        (MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+            MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1)).setPhoneNumber(profOwnTFPhone.getText());
+        profOwnTFPhone.setText("Phone number has been updated.");
+    }
+
+    //Back Button
+    public void profOwnBackButtonAction(ActionEvent event){
+        MainScreen mainScreen = new MainScreen();
+        mainScreen.navigate();
     }
 
     //Navigation
@@ -79,7 +121,7 @@ public class ProfileOwner extends Application implements Navigable{
         MealReelApplication.stage.getScene().setRoot(MealReelApplication.profileOwn);
     }
  
- public static void main(String[] args) {
+    public static void main(String[] args) {
         launch(args);
     }
 }

@@ -85,56 +85,6 @@ public class MainScreen extends Application implements Navigable{
         //mainScShortCPizza.setImage(pizza);
         //mainScShortCSalad.setImage(salad);
 
-        //Login navigation via button.
-        mainScButtonLogin = new Button();
-        mainScButtonLogin.setOnAction(new EventHandler<ActionEvent>() {
-            
-            public void handle(ActionEvent event){
-                LoginChoice loginChoice = new LoginChoice();
-                loginChoice.navigate();
-            }
-        });
-
-        //Sign Up navigation via button.
-        mainScButtonSignUp = new Button();
-        mainScButtonSignUp.setOnAction(new EventHandler<ActionEvent>() {
-            
-            public void handle(ActionEvent event){
-                SignUpChoice signUpChoice = new SignUpChoice();
-                //signUpChoice.navigate();
-            }
-        });
-
-        //Profile button
-        mainScButtonProfile = new Button();
-        mainScButtonProfile.setOnAction(new EventHandler<ActionEvent>() {
-            
-            public void handle(ActionEvent event){
-                if (MealReelApplication.listOfUsers.getUserList().get(MealReelApplication.listOfUsers.getUserList().size() - 1) instanceof Customer) {
-                    //Customer newCust = MealReelApplication.listOfUsers.get(MealReelApplication.listOfUsers.size() - 1);
-                    
-                    //newProfCus.profCusTFName.setText(newProfCus.getCustName());
-                    
-                    
-                } else {
-                    
-                }
-            }
-        });
-
-        //Search bar usage
-        mainScSearchBar = new TextField();
-
-        mainScButtonSearch = new Button();
-        mainScButtonSearch.setOnAction(new EventHandler<ActionEvent>() {
-            
-            public void handle(ActionEvent event){
-                searchString = mainScSearchBar.getText();
-                SearchPage searchpage = new SearchPage();
-                searchpage.navigate();      
-            }
-        });
-
     }
 
     //Navigate to Login Choice
@@ -145,22 +95,57 @@ public class MainScreen extends Application implements Navigable{
     }
 
     //Navigate to Sign Up Choice
-    //public void signUpChoiceNav(ActionEvent event){
-    //    try 
-    //    {
-    //        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SignUpChoice.fxml"));
-    //        MealReelApplication.signUpChoice = (Parent) fxmlLoader.load();
-    //    } catch (Exception e) {
-    //        e.printStackTrace();
-    //    }
-    //    MealReelApplication.stage.getScene().setRoot(MealReelApplication.signUpChoice);
-    //}
+    public void signUpChoiceNav(ActionEvent event){
+        //try 
+        //{
+        //    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SignUpChoice.fxml"));
+        //    MealReelApplication.signUpChoice = (Parent) fxmlLoader.load();
+        //} catch (Exception e) {
+        //    e.printStackTrace();
+        //}
+        //MealReelApplication.stage.getScene().setRoot(MealReelApplication.signUpChoice);
+    }
 
     //Navigate to Profile
     public void profileNav(ActionEvent event){
-        System.out.println("Test");
+        if (LoginAsCustomer.loggedInAsCus == true) {
+            ProfileCustomer profileCustomer = new ProfileCustomer();
+            profileCustomer.profCusTFName.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getUsername());
+            profileCustomer.profCusTFAdress.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getAddress().toString());
+            profileCustomer.profCusTFEmail.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getEmail());
+            profileCustomer.profCusTFRealName.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getCustName());
+            profileCustomer.profCusTFRealSurname.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getCustSurname());
+            profileCustomer.profCusTFRecComment.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getCommentsGivenByCustomer().get(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1));
+            profileCustomer.navigate();
+        }else if (LoginAsRestaurantOwner.loggedInAsOwner == true) {
+            ProfileOwner profileOwner = new ProfileOwner();
+            profileOwner.profOwnTFName.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getUsername());
+            profileOwner.profOwnTFAdress.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getAddress().toString());
+            profileOwner.profOwnTFEmail.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getEmail());
+            profileOwner.profOwnTFPhone.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getPhoneNumber());
+            profileOwner.profOwnTFDesc.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getDescription());
+            profileOwner.profOwnTFRating.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
+                MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1).getGivenRatings().toString());
+            profileOwner.navigate();
+        }
     }
 
+    //Search button function
+    public void search(ActionEvent event){
+        searchString = mainScSearchBar.getText();
+        SearchPage searchPage = new SearchPage();
+    }
 
     //Navigation
     public void navigate() {

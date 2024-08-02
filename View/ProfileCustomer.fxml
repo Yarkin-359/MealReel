@@ -18,20 +18,24 @@
 
 <BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProfileCustomer">
    <left>
-      <AnchorPane prefHeight="200.0" prefWidth="80.0" style="-fx-background-color: orange;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="80.0" style="-fx-background-color: orange; -fx-border-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="profCusBackButton" accessibleRole="BUTTON" fitHeight="50.0" fitWidth="50.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@backButton.png" />
-               </image>
-            </ImageView>
+            <Button fx:id="profCusBackButton" layoutX="7.0" layoutY="14.0" mnemonicParsing="false" onAction="#profCusBackButtonAction" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: orange;" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="15.0">
+               <graphic>
+                  <ImageView fx:id="profCusBackButtonImage" accessibleRole="BUTTON" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@backButton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
    </left>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: darkorange; -fx-border-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: orange;" VBox.vgrow="ALWAYS">
+            <AnchorPane prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: orange; -fx-border-color: black;" VBox.vgrow="ALWAYS">
                <children>
                   <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
@@ -45,17 +49,6 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Button fx:id="profCusChangePic" alignment="CENTER" mnemonicParsing="false" prefHeight="34.0" prefWidth="120.0" style="-fx-background-color: darkorange;" text="Change Picture" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
-                                 <GridPane.margin>
-                                    <Insets left="130.0" />
-                                 </GridPane.margin>
-                              </Button>
                               <ImageView fx:id="profCusPicture" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <image>
                                     <Image url="@defaultProfPic.png" />
@@ -81,7 +74,7 @@
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </TextField>
-                              <Button fx:id="profCusChangeName" alignment="CENTER" layoutX="46.0" layoutY="58.0" mnemonicParsing="false" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="60.0">
+                              <Button fx:id="profCusChangeName" alignment="CENTER" layoutX="46.0" layoutY="58.0" mnemonicParsing="false" onAction="#profCusChangeName" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="60.0">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -95,7 +88,7 @@
                   </HBox>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: orange;" VBox.vgrow="ALWAYS">
+            <AnchorPane prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: orange; -fx-border-color: black;" VBox.vgrow="ALWAYS">
                <children>
                   <TextField alignment="CENTER" editable="false" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: transparent;" text="Current Adress" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
@@ -107,7 +100,7 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="profCusChangeAdress" alignment="CENTER" layoutX="597.0" layoutY="51.0" mnemonicParsing="false" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                  <Button fx:id="profCusChangeAdress" alignment="CENTER" layoutX="597.0" layoutY="51.0" mnemonicParsing="false" onAction="#profCusChangeAdress" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -117,7 +110,7 @@
                   </Button>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: orange;" VBox.vgrow="ALWAYS">
+            <AnchorPane prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: orange; -fx-border-color: black;" VBox.vgrow="ALWAYS">
                <children>
                   <TextField alignment="CENTER" editable="false" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: transparent;" text="Email Adress" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
@@ -129,7 +122,7 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="profCusChangeEmail" alignment="CENTER" layoutX="597.0" layoutY="56.0" mnemonicParsing="false" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                  <Button fx:id="profCusChangeEmail" alignment="CENTER" layoutX="597.0" layoutY="56.0" mnemonicParsing="false" onAction="#profCusChangeEmail" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -141,22 +134,44 @@
             </AnchorPane>
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" VBox.vgrow="ALWAYS">
                <children>
-                  <AnchorPane prefHeight="100.0" prefWidth="330.0" style="-fx-background-color: orange;" HBox.hgrow="ALWAYS">
+                  <AnchorPane prefHeight="100.0" prefWidth="330.0" style="-fx-background-color: orange; -fx-border-color: black;" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                      <children>
-                        <TextField alignment="CENTER" editable="false" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: transparent;" text="Phone Number" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TextField alignment="CENTER" editable="false" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="Name" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="profCusTFPhone" alignment="CENTER" layoutX="14.0" layoutY="40.0" prefHeight="40.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="40.0">
+                        <TextField fx:id="profCusTFRealName" alignment="CENTER" layoutX="14.0" layoutY="40.0" prefHeight="40.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="40.0">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </TextField>
-                        <Button fx:id="profCusChangePhone" alignment="CENTER" layoutX="247.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                        <Button fx:id="profCusChangeRealName" alignment="CENTER" layoutX="247.0" layoutY="45.0" mnemonicParsing="false" onAction="#profCusChangeRealName" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="330.0" style="-fx-background-color: orange; -fx-border-color: black;">
+                     <children>
+                        <TextField alignment="CENTER" editable="false" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="Surname" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="profCusTFRealSurname" alignment="CENTER" layoutX="14.0" layoutY="40.0" prefHeight="40.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="profCusChangeRealSurname" alignment="CENTER" layoutX="247.0" layoutY="45.0" mnemonicParsing="false" onAction="#profCusChangeRealSurname" style="-fx-background-color: darkorange;" text="Change" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -173,7 +188,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" VBox.vgrow="ALWAYS">
                <children>
-                  <AnchorPane prefHeight="100.0" prefWidth="330.0" style="-fx-background-color: orange;" HBox.hgrow="ALWAYS">
+                  <AnchorPane prefHeight="100.0" prefWidth="330.0" style="-fx-background-color: orange; -fx-border-color: black;" HBox.hgrow="ALWAYS">
                      <children>
                         <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <columnConstraints>
@@ -189,7 +204,7 @@
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </TextField>
-                              <Button fx:id="profCusRevHistory" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: darkorange;" text="Click Here" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Button fx:id="profCusRevHistory" alignment="CENTER" mnemonicParsing="false" onAction="#profCusReviewHistoryAction" style="-fx-background-color: darkorange;" text="Click Here" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -201,7 +216,7 @@
                         </GridPane>
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="100.0" prefWidth="330.0" style="-fx-background-color: orange;" HBox.hgrow="ALWAYS">
+                  <AnchorPane prefHeight="100.0" prefWidth="330.0" style="-fx-background-color: orange; -fx-border-color: black;" HBox.hgrow="ALWAYS">
                      <children>
                         <Text layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Most Recent Comment" textAlignment="CENTER" wrappingWidth="200.556640625" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="13.576171875">
                            <font>

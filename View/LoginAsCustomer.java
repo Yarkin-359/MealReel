@@ -24,6 +24,7 @@ public class LoginAsCustomer implements Navigable{
     Button login;
     ListOfUsers listOfUsers;
     ArrayList<Customer> listOfCustomers;
+    static boolean loggedInAsCus = false;
 
     public LoginAsCustomer() {
         listOfCustomers = MealReelApplication.listOfUsers.getCustomersFromListOfUsers();
@@ -65,7 +66,9 @@ public class LoginAsCustomer implements Navigable{
 
                 if(!isFound) {
                     login.setText("User not found");
-                } 
+                } else {
+                    loggedInAsCus = true;
+                }
             }
 
         });

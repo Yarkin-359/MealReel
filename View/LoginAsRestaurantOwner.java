@@ -24,6 +24,7 @@ public class LoginAsRestaurantOwner implements Navigable {
     Button login;
     ListOfUsers listOfUsers;
     ArrayList<RestaurantOwner> listOfRestaurantOwners;
+    static boolean loggedInAsOwner;
 
     public LoginAsRestaurantOwner() {
         listOfRestaurantOwners = MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers();
@@ -65,6 +66,8 @@ public class LoginAsRestaurantOwner implements Navigable {
 
                 if(!isFound) {
                     login.setText("User not found");
+                }else{
+                    loggedInAsOwner = true;
                 }
             }
         
