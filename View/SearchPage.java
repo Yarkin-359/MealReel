@@ -453,6 +453,8 @@ public class SearchPage implements Navigable{
 
     public void radioButton1(ActionEvent event)
     {
+        restaurantFilter.resetFilter();
+
         sortByAlphabeticalOrder = true;
         sortByPopularity = false;
         sortByRating = false;
@@ -478,6 +480,8 @@ public class SearchPage implements Navigable{
     }
     public void radioButton2(ActionEvent event)
     {
+        restaurantFilter.resetFilter();
+
         sortByAlphabeticalOrder = false;
         sortByPopularity = true;
         sortByRating = false;
@@ -502,6 +506,8 @@ public class SearchPage implements Navigable{
     }
     public void radioButton3(ActionEvent event)
     {
+        restaurantFilter.resetFilter();
+
         sortByAlphabeticalOrder = false;
         sortByPopularity = false;
         sortByRating = true;

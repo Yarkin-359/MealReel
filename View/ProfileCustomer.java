@@ -42,6 +42,9 @@ public class ProfileCustomer extends Application implements Navigable{
     private Button profCusRevHistory;
 
     @FXML
+    private Button profCusRevHisBackButton;
+
+    @FXML
     public TextField profCusTFRealName;
 
     @FXML
@@ -115,14 +118,20 @@ public class ProfileCustomer extends Application implements Navigable{
         mainScreen.navigate();
     }
 
+    //Back Button
+    public void profCusRevHisBackButtonAction(ActionEvent event){
+        MainScreen mainScreen = new MainScreen();
+        mainScreen.navigate();
+    }
+
     //Review History Button
     public void profCusReviewHistoryAction(ActionEvent event){
-        profCusReviewHistoryTF.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
-            MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getCommentsGivenByCustomer().get(0));
-        for (int index = 1; index < (MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1); index++) {
-            profCusReviewHistoryTF.setText(profCusReviewHistoryTF + MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
-            MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getCommentsGivenByCustomer().get(index));
-        }
+        //profCusReviewHistoryTF.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
+        //    MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getCommentsGivenByCustomer().get(0));
+        //for (int index = 1; index < (MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1); index++) {
+        //    profCusReviewHistoryTF.setText(profCusReviewHistoryTF + MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
+        //    MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getCommentsGivenByCustomer().get(index));
+        //}
         
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CustomerReviewHistory.fxml"));
 
@@ -132,6 +141,8 @@ public class ProfileCustomer extends Application implements Navigable{
             e.printStackTrace();
         }
         MealReelApplication.stage.getScene().setRoot(MealReelApplication.profCusRevHistory);
+
+        
     }
 
     //Navigation

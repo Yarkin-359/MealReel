@@ -134,6 +134,7 @@ public class MainScreen extends Application implements Navigable{
             ProfileCustomer profileCustomer = new ProfileCustomer();
             Customer customerTemp = (Customer) MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
                 MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1);
+                LoginAsCustomer.loggedInAsCus = false;
             profileCustomer.navigate();
             
             profileCustomer.profCusTFName.setText(MealReelApplication.listOfUsers.getCustomersFromListOfUsers().get(
@@ -157,6 +158,7 @@ public class MainScreen extends Application implements Navigable{
             ProfileOwner profileOwner = new ProfileOwner();
             RestaurantOwner ownerTemp = (RestaurantOwner) MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
                 MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().size() - 1);
+                LoginAsRestaurantOwner.loggedInAsOwner = false;
             profileOwner.navigate();
             
             profileOwner.profOwnTFName.setText(MealReelApplication.listOfUsers.getRestaurantOwnersFromListOfUsers().get(
