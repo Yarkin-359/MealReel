@@ -30,38 +30,59 @@ public class MainScreen extends Application implements Navigable{
     private Button mainScButtonSignUp;
 
     @FXML
+    private Button mainScShortCBurger;
+
+    @FXML
+    private Button mainScShortCChicken;
+
+    @FXML
+    private Button mainScShortCDoner;
+
+    @FXML
+    private Button mainScShortCKebap;
+
+    @FXML
+    private Button mainScShortCPasta;
+
+    @FXML
+    private Button mainScShortCPizza;
+
+    @FXML
+    private Button mainScShortCSalad;
+
+    @FXML
     private TextField mainScSearchBar;
 
     @FXML
-    private ImageView mainScShortCBorek;
+    private ImageView borekImage;
     private Image borek = new Image("borek.jpg");
 
     @FXML
-    private ImageView mainScShortCBurger;
+    private ImageView burgerImage;
     private Image burger = new Image("burger.jpg");
 
     @FXML
-    private ImageView mainScShortCChicken;
+    private ImageView chickenImage;
     private Image chicken = new Image("chicken.jpg");
 
     @FXML
-    private ImageView mainScShortCDoner;
+    private ImageView donerImage;
     private Image doner = new Image("doner.jpg");
 
     @FXML
-    private ImageView mainScShortCKebap;
+    private ImageView kebapImage;
     private Image kebap = new Image("kebap.jpg");
 
     @FXML
-    private ImageView mainScShortCPasta;
+    private ImageView pastaImage;
     private Image pasta = new Image("pasta.jpg");
 
     @FXML
-    private ImageView mainScShortCPizza;
+    private ImageView pizzaImage;
     private Image pizza = new Image("pizza.jpg");
 
     @FXML
-    private ImageView mainScShortCSalad;
+    private ImageView saladImage;
     private Image salad = new Image("salad.jpg");
 
     public void start(Stage primaryStage) {
