@@ -16,6 +16,7 @@ public class MealReelApplication extends Application {
     public static Parent mainScreen;
     public static Parent profileCus;
     public static Parent profileOwn;
+    public static Parent profCusRevHistory;
     public static ListOfUsers listOfUsers  = new ListOfUsers(); //list of users which should be accesible for all pages
 
     @Override

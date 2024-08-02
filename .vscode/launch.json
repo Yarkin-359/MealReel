@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ProfileCustomer",
+            "request": "launch",
+            "mainClass": "ProfileCustomer",
+            "projectName": "MealReel_32cf7f18"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

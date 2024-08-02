@@ -60,7 +60,7 @@ public class ProfileCustomer extends Application implements Navigable{
     public TextField profCusTFRecComment;
 
     @FXML
-    private TextField profCusReviewHistoryTF;
+    public TextField profCusReviewHistoryTF;
 
     public void start(Stage primaryStage) {
         //Set ImageView pictures
@@ -124,17 +124,14 @@ public class ProfileCustomer extends Application implements Navigable{
             MealReelApplication.listOfUsers.getCustomersFromListOfUsers().size() - 1).getCommentsGivenByCustomer().get(index));
         }
         
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CustomerReviewHistory.fxml"));
+
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CustomerReviewHistory.fxml"));
-            Parent rootParent = (Parent) fxmlLoader.load();
-            Stage revHistory = new Stage();
-            revHistory.setTitle("Review History");
-            revHistory.setScene(new Scene(rootParent));
-            revHistory.show();
+            MealReelApplication.profCusRevHistory = (Parent) fxmlLoader.load();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+        MealReelApplication.stage.getScene().setRoot(MealReelApplication.profCusRevHistory);
     }
 
     //Navigation
